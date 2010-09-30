@@ -1,0 +1,28 @@
+<p>
+  <b>Numero:</b>
+  <%=h @quarto.numero %>
+</p>
+
+<p>
+  <b>Andar:</b>
+  <%=h @quarto.andar %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%=h @quarto.tipo_nome %>
+</p>
+
+<p>
+  <b>Camas:</b>
+  <%=h @quarto.camas %>
+</p>
+
+<p>
+  <b>Classe:</b>
+  <%=h @quarto.classe_nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_quarto_path(@quarto) %> |
+<%= link_to 'Back', quartos_path %>
