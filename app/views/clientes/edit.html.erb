@@ -1,0 +1,24 @@
+<h1>Editing cliente</h1>
+
+<% form_for(@cliente) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.label :acompanhate %><br />
+    <%= f.text_area :acompanhate %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cliente %> |
+<%= link_to 'Back', clientes_path %>
