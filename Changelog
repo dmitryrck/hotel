@@ -3,3 +3,12 @@
   * Criado o Projeto: `rails hotel'
   * Criado o cadastro de clientes: `script/generate scaffold Cliente nome:string endereco:string acompanhate:text'
   * Migrando Banco de Dados: `rake db:migrate'
+
+2010-09-11 11:02 Alvinho
+
+  * Criado o cadastro de quartos: `script/generate scaffold Quarto numero:integer andar:integer tipo:integer camas:integer classe:integer'
+  * Migrando Banco de Dados: `rake db:migrate'
+
+2010-09-28 19:00 Dmitry Nix
+
+  * Criado página inicial: HomeController.
