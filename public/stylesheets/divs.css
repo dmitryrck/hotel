@@ -1,0 +1,111 @@
+/*
+ * Logotipo (imagem), o Cabeçalhos das páginas e os Links,
+ * by: Losangelo Pacífico +55 86 8841 0678
+ * */
+
+#BoxPrincipal{
+	position:relative;
+	float:center;				
+}
+
+#imagemCabec {
+	display: inline-block;
+	position:relative;
+	float:inherit;
+	width: 700px;/*157px;*/
+	height: 121px;	
+	w_left: 3px;
+	
+	background-image:url("/images/miraceu_logo1.jpg");
+	background-repeat:repeat-x;
+	-moz-border-right-colors:blue "transparent";
+
+	font-size: 100%;
+	font-family:"Trebuchet MS", "Comic Sans MS";
+	color:#09548B;
+	font-weight: bold;
+	font-style: italic;	
+	
+	position:relative;
+	float: inherit;	
+	
+	text-align:center;
+	white-space:pre-line;
+	margin-bottom: -5px;		
+}
+
+a.linkto{
+	float:right;
+	margin-top:0px;
+	display:compact;
+	padding: 2px 2px 2px 2px;
+	/*width: 62px;*/
+	/*background-color:#057FAC;*/
+	color:#666666;
+	font-size:11px;	
+	font-weight:bolder;
+	/*-moz-border-radius: 4px 4px 4px 4px;*/
+}
+
+a.linktoLeft{
+	/*float:left;*/
+	margin-top:0px;
+	display:compact;
+	padding: 2px 2px 2px 2px;
+	/*width: 62px;*/
+	/*background-color:#057FAC;*/
+	color:#666666;
+	font-size:11px;	
+	font-weight:bolder;
+	/*-moz-border-radius: 4px 4px 4px 4px;*/
+}
+
+a.homelink{
+	float:inherit;
+	margin-top:40px;
+	display:block;
+	padding: 2px 2px 2px 2px;
+	width: 62px;
+	background-color:#6490EA;/* #057FAC;*/
+	color:white; /*#FFFFFF;*/
+	text-transform:uppercase;
+	font-size:14px;	
+	font-weight:bold;
+	font-family:"Trebuchet MS", sans-serif;
+	-moz-border-radius: 8px 8px 8px 8px;		
+}
+
+a.homelink:hover{	
+	background-color:#4883CE; /*#CCFF33;*/
+	text-decoration:none;
+}
+
+
+/* para as informacoes de alerta*/
+.notice, .error, .warning, .info {
+font-weight: bold;
+margin: -10px 0 15px 0;
+padding: 5px 5px 5px 27px;
+}
+.notice {
+border: 1px solid #9c9;
+background: #e2f9e3 url(../images/tick.png) no-repeat 5px center;
+color: #060;
+}
+.error {
+border: 1px solid #c68484;
+background: #fcc url(../images/cross.png) no-repeat 5px center;
+color: #c00;
+}
+.warning {
+border: 1px solid #dd0;
+background: #ffc url(../images/error.png) no-repeat 5px center;
+color: #000;
+}
+.info {
+border: 1px solid #82c2d4;
+background: #ebf5f8 url(../images/information.png) no-repeat 5px center;
+color: #000;
+}
+
+

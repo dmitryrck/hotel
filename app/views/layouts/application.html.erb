@@ -1,17 +1,145 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>lin4tec Hotel - Sistema de Hotelaria </title>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Hotel: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
-</head>
-<body>
+		<%=stylesheet_link_tag "div"%>
+		<%=stylesheet_link_tag "menudrop/menu_style"%>
+		<%=stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
 
-<p style="color: green"><%= flash[:notice] %></p>
+    	<%= javascript_include_tag "jquery", "jquery-ui", "application" %>		
+	</head>
+	
+	<body>
+		
+	<div id="BoxPrincipal">
 
-<%= yield %>
+	<center>
+		<div id="imagemCabec">
+			<h1>
+				 Sistema de Hotelaria - Lin4tec News
+			</h1>
+		</div>
+	</center>
+		
+	<div class="wrapper1">
+		<div class="wrapper">
+			<div class="nav-wrapper">
+				<div class="nav-left"></div>
+				<div class="nav">
+					<ul id="navigation">
+				   		<li class="">
+							<a href= '#' >
+								<span class="menu-left"></span>
+								<span class="menu-mid">Home</span>
+								<span class="menu-right"></span>
+							</a>
+						</li>
 
+				   		<li class="">
+							<a href="#">
+								<span class="menu-left"></span>
+								<span class="menu-mid">Cadastros</span>
+								<span class="menu-right"></span>
+							</a>
+		          <div class="sub">
+				   				<ul>				   					
+									<li><%= link_to 'Clientes', clientes_path %></li>									
+									<li><%= link_to 'Quartos', quartos_path %></li>									 
+				   					<li><a> Serviços </a></li>
+				   				</ul>
+				   				<div class="btm-bg"></div>
+				   		</div>
+
+						</li>
+				   		<li class="">
+							<a href="#">
+								<span class="menu-left"></span>
+								<span class="menu-mid">Reservas</span>
+								<span class="menu-right"></span>
+							</a>
+				   			<div class="sub">
+				   				<ul>
+				   					<li>										
+										<li> </li>
+									</li>				   				
+				   				</ul>
+				   				<div class="btm-bg"></div>
+				   			</div>
+				   		</li>
+				   		<li class="">
+							<a href="#">
+								<span class="menu-left"></span>
+								<span class="menu-mid">American Bar</span>
+								<span class="menu-right"></span>
+							</a>		            	   
+						</li>
+
+				   		<li class="">
+							<a href="#">
+								<span class="menu-left"></span>
+								<span class="menu-mid">Relatórios</span>
+								<span class="menu-right"></span>
+							</a>
+		            	   	<div class="sub">
+				   				<ul>				   					
+				   					<li>
+										<a href="#"></a>
+									</li>
+									<li>
+										<a href="#"></a>
+									</li>
+				   				</ul>
+				   				<div class="btm-bg"></div>
+				   			</div>
+						</li>
+
+
+				   		<li class="last">
+							<a href="">
+								<span class="menu-left"></span>
+								<span class="menu-mid">Contato</span>
+								<span class="menu-right"></span>
+							</a>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							
+						</li>
+				   	</ul>
+				</div>
+				<div class="nav-right"></div>
+
+				<div class="content">
+
+					<%= yield%>	<br>
+					<%=link_to "&laquo; home", root_path, :class=>"homelink"%>
+
+				</div>
+			</div>
+
+
+			<div class="content-bottom"></div>
+			 
+			<center>
+				<p>
+			 	Suporte: lin4tec News, Rua Goias, s/n, Piçarra, Teresina-Pi<br />
+				Losangelo Pacífico (Olegnasol), Dmitry (Dmy), Alvaro (Alvin) e Ceza (TC)
+				
+				</p>
+			</center>
+			
+		</div>
+	 </div>
+	 <br>
+		 
+	</div>
+	
 </body>
+
 </html>
+
