@@ -1,4 +1,6 @@
 class Quarto < ActiveRecord::Base
+  validates_presence_of :numero, :andar, :tipo, :camas, :classe
+
   def tipo_nome
     if self.tipo == 1
       "Solteiro"
