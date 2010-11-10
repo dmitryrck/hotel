@@ -1,0 +1,12 @@
+<h1>Editar Usuário</h1>
+
+<% form_for(@usuario) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'formulario', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Atualizar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Ver', @usuario %> |
+<%= link_to 'Todos', usuarios_path %>

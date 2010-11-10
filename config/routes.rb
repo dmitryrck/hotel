@@ -1,4 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'sessoes/destroy', :controller => 'sessoes', :action => 'destroy'
+  map.resources :sessoes
+
+  map.resources :usuarios
+
   map.resources :reservas
 
   map.resources :quartos

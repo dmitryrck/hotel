@@ -1,0 +1,13 @@
+<%= flash[:error] %>
+<% form_for :sessao, :url => sessoes_path do |f| %>
+  <p>
+    <%= f.label :login %>
+    <%= f.text_field :login %>
+  </p>
+
+  <p>
+    <%= f.label :senha %>
+    <%= f.password_field :senha %>
+  </p>
+  <%= f.submit 'Entrar' %>
+<% end %>

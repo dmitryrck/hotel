@@ -1,0 +1,12 @@
+<h1>Novo Usuário</h1>
+
+<% form_for(@usuario) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'formulario', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Criar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Todos', usuarios_path %>
