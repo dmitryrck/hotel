@@ -3,7 +3,7 @@
 <% form_for(@reserva) do |f| %>
   <%= f.error_messages %>
 
-  <%= render :partial => 'write', :locals => { :f => f } %>
+  <%= render :partial => 'formulario', :locals => { :f => f } %>
   <p>
     <%= f.submit 'Criar' %>
   </p>
