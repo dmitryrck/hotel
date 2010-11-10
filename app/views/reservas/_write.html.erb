@@ -1,0 +1,16 @@
+<p>
+  <%= f.label :cliente_id %><br />
+  <%= f.collection_select :cliente_id, Cliente.all, :id, :nome, :include_blank => true %>
+</p>
+<p>
+  <%= f.label :data_reserva %><br />
+  <%= f.date_select :data_reserva %>
+</p>
+<p>
+  <%= f.label :data_fim %><br />
+  <%= f.date_select :data_fim %>
+</p>
+<p>
+  <%= f.label :quarto_id %><br />
+  <%= f.collection_select :quarto_id, Quarto.all, :id, :nome, :include_blank => true %>
+</p>

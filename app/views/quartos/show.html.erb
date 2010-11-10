@@ -23,6 +23,12 @@
   <%=h @quarto.classe_nome %>
 </p>
 
+<p>
+  <b>Reservas:</b>
+  <% @quarto.reservas.sort(&:data_reserva).each do |reserva| %>
+    <p><%= link_to reserva.data_reserva, reserva %></p>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_quarto_path(@quarto) %> |
 <%= link_to 'Back', quartos_path %>

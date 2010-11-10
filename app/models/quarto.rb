@@ -1,4 +1,6 @@
 class Quarto < ActiveRecord::Base
+  has_many :reservas
+
   validates_presence_of :numero, :andar, :tipo, :camas, :classe
 
   def tipo_nome
@@ -17,5 +19,9 @@ class Quarto < ActiveRecord::Base
     elsif self.classe == 3
       "Master"
     end
+  end
+
+  def nome
+    "#{andar} #{classe_nome} #{tipo_nome}"
   end
 end

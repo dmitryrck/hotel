@@ -1,0 +1,12 @@
+<h1>Edição de Reserva</h1>
+
+<% form_for(@reserva) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'write', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Atualizar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Ver', @reserva %> |
+<%= link_to 'Todas', reservas_path %>

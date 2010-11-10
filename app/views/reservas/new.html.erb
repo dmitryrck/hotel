@@ -1,0 +1,12 @@
+<h1>Nova Reserva</h1>
+
+<% form_for(@reserva) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'write', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Criar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Todos', reservas_path %>

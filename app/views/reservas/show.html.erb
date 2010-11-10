@@ -1,0 +1,23 @@
+<p>
+  <b>Cliente:</b>
+  <%=h @reserva.cliente_id %>
+</p>
+
+<p>
+  <b>Data reserva:</b>
+  <%=h @reserva.data_reserva %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%=h @reserva.data_fim %>
+</p>
+
+<p>
+  <b>Quarto:</b>
+  <%=h @reserva.quarto_id %>
+</p>
+
+
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+<%= link_to 'Todos', reservas_path %>
