@@ -3,6 +3,16 @@
  * by: Losangelo Pacífico +55 86 8841 0678
  * */
 
+#box_campos{
+	display:compact;
+	padding: 2px 2px 2px 2px;
+	background-color:#4A98AF;
+	color:#666666;
+	font-size:11px;
+	font-weight:bolder;
+	-moz-border-radius: 4px 4px 4px 4px;
+}
+
 #BoxPrincipal{
 	position:relative;
 	float:center;				
