@@ -10,6 +10,13 @@
  * Espacamento entre o menu de opcoes
  * e o h1 titulo.
  */
+
+body{
+    background-image: ;
+    background: #DDD url(images/cdbf-linux.png) repeat;
+    background-color: transparent;
+}
+
 .wrapper1{
 	color: #44433f;
 	font: 13px "Futura Medium", "Myriad Pro", "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
