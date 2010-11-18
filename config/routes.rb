@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :usuarios
 
   map.resources :hospedagens
+  map.connect 'hospedagens/:id/consumo', :controller => 'hospedagens', :action => 'consumo'
+  map.connect 'hospedagens/:id/consumir', :controller => 'hospedagens', :action => 'consumir'
 
   map.resources :quartos
 
