@@ -28,3 +28,7 @@
 2010-11-10 10:59 Dmitry Nix
 
   * Criado usuários e autenticação.
+
+2010-11-18 11:00 Alvinho
+
+  * Criado cadastro de produtos: `./script/generate Produtos nome:string preco:float'
