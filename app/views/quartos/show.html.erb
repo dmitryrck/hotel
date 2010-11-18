@@ -25,7 +25,7 @@
 
 <p>
   <b>Reservas:</b>
-  <% @quarto.reservas.sort(&:data_reserva).each do |reserva| %>
+  <% @quarto.hospedagens.sort(&:data_reserva).each do |reserva| %>
     <p><%= link_to reserva.data_reserva, reserva %></p>
   <% end %>
 </p>
