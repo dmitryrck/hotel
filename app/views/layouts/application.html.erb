@@ -29,14 +29,14 @@
 				<div class="nav">
 					<ul id="navigation">
 				   		<li class="<%= 'active' if controller_name == 'home'%>">
-							<a href= '#' >
+							<a href= '<%= root_path %>' >
 								<span class="menu-left"></span>
 								<span class="menu-mid"> Home </span>
 								<span class="menu-right"></span>
 							</a>
 						</li>
 
-				   		<li class="<%= 'active' if controller_name == 'quartos' %>">
+				   		<li class="<%= 'active' if controller_name == 'quartos' or controller_name == 'clientes' or controller_name == 'produtos' %>">
 							<a href="#">
 								<span class="menu-left"></span>
 								<span class="menu-mid">Cadastros</span>
@@ -45,7 +45,11 @@
 		          <div class="sub">
 				   				<ul>
 									<li><%= link_to 'Quartos', quartos_path %></li>
+<<<<<<< HEAD
 									<li><a> Produtos </a></li>
+=======
+									<li><%= link_to 'Produtos', produtos_path %></li>
+>>>>>>> 6ae7712cf2078b0f397d184ea6f6f5c74bbbb400
 				   				</ul>
 				   				<div class="btm-bg"></div>
 				   		</div>
