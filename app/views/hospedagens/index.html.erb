@@ -1,0 +1,28 @@
+<h1>Hospedagem</h1>
+
+<%= calendar_render %>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Data reserva</th>
+    <th>Data fim</th>
+    <th>Quarto</th>
+  </tr>
+
+<% @hospedagens.each do |hospedagem| %>
+  <tr>
+    <td><%=h hospedagem.cliente_id %></td>
+    <td><%=h hospedagem.data_reserva %></td>
+    <td><%=h hospedagem.data_fim %></td>
+    <td><%=h hospedagem.quarto_id %></td>
+    <td><%= link_to 'Ver', hospedagem %></td>
+    <td><%= link_to 'Editar', edit_hospedagem_path(hospedagem) %></td>
+    <td><%= link_to 'Apagar', hospedagem, :confirm => 'Sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Hospedagem', new_hospedagem_path %>

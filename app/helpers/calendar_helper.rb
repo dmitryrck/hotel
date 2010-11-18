@@ -8,7 +8,7 @@ module CalendarHelper
 
     return_string = "<h1>Em #{month}-#{year}</h1>"
     (first..last).each do |day|
-      return_string << day.day.to_s unless Reserva.all(:conditions => ['data_reserva = ?', day]).size.zero?
+      return_string << day.day.to_s unless Hospedagem.all(:conditions => ['data_reserva = ?', day]).size.zero?
     end
     return_string
   end

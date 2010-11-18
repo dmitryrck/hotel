@@ -1,0 +1,23 @@
+<p>
+  <b>Cliente:</b>
+  <%=h @hospedagem.cliente_id %>
+</p>
+
+<p>
+  <b>Data hospedagem:</b>
+  <%=h @hospedagem.data_hospedagem %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%=h @hospedagem.data_fim %>
+</p>
+
+<p>
+  <b>Quarto:</b>
+  <%=h @hospedagem.quarto_id %>
+</p>
+
+
+<%= link_to 'Editar', edit_hospedagem_path(@hospedagem) %> |
+<%= link_to 'Todos', hospedagens_path %>

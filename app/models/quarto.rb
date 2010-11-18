@@ -1,5 +1,5 @@
 class Quarto < ActiveRecord::Base
-  has_many :reservas
+  has_many :hospedagens
 
   validates_presence_of :numero, :andar, :tipo, :camas, :classe
 

@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :usuarios
 
-  map.resources :reservas
+  map.resources :hospedagens
 
   map.resources :quartos
 
