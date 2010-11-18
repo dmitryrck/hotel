@@ -1,0 +1,28 @@
+<p>
+  <b>Cliente:</b>
+  <%=h @hospedagem.cliente_id %>
+</p>
+
+<p>
+  <b>Data hospedagem:</b>
+  <%=h @hospedagem.data_reserva %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%=h @hospedagem.data_fim %>
+</p>
+
+<p>
+  <b>Quarto:</b>
+  <%=h @hospedagem.quarto_id %>
+</p>
+
+<ul>Consumos:
+  <% @hospedagem.produtos_hospedagens.each do |consumo| %>
+  <li><%= consumo.hospedagem.cliente_nome %> - <%= consumo.produto.nome %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Editar', edit_hospedagem_path(@hospedagem) %> |
+<%= link_to 'Todos', hospedagens_path %>

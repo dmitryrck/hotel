@@ -1,6 +1,6 @@
-<h1>Edição de Reserva</h1>
+<h1>Edição de Hospedagem</h1>
 
-<% form_for(@reserva) do |f| %>
+<% form_for(@hospedagem) do |f| %>
   <%= f.error_messages %>
   <%= render :partial => 'formulario', :locals => { :f => f } %>
   <p>
@@ -8,5 +8,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Ver', @reserva %> |
-<%= link_to 'Todas', reservas_path %>
+<%= link_to 'Ver', @hospedagem %> |
+<%= link_to 'Todas', hospedagens_path %>
