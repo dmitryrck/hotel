@@ -1,4 +1,4 @@
-<h1>Editing quarto</h1>
+<h1>Editar quarto</h1>
 
 <% form_for(@quarto) do |f| %>
   <%= f.error_messages %>
@@ -36,9 +36,9 @@
 			</select>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Atualizar' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @quarto %> |
-<%= link_to 'Back', quartos_path %>
+<%= link_to 'Ver', @quarto %> |
+<%= link_to 'Voltar', quartos_path %>
