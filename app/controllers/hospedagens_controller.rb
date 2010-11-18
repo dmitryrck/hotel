@@ -80,4 +80,14 @@ class HospedagensController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def consumo
+    @hospedagem = Hospedagem.find(params[:id])
+  end
+
+  def consumir
+    @hospedagem = Hospedagem.find(params[:id])
+    @hospedagem.adicionar_consumo(params[:consumo])
+    redirect_to @hospedagem
+  end
 end

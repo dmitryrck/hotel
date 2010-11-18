@@ -17,6 +17,7 @@
     <td><%=h hospedagem.data_fim %></td>
     <td><%=h hospedagem.quarto_id %></td>
     <td><%= link_to 'Ver', hospedagem %></td>
+    <td><%= link_to 'Adicionar Consumo', { :controller => :hospedagens, :action => :consumo, :id => hospedagem.id } %></td>
     <td><%= link_to 'Editar', edit_hospedagem_path(hospedagem) %></td>
     <td><%= link_to 'Apagar', hospedagem, :confirm => 'Sure?', :method => :delete %></td>
   </tr>
