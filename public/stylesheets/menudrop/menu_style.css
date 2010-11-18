@@ -7,15 +7,16 @@
  */
 
 /*
- * Espacamento entre o menu de opcoes e o h1 titulo.
- * */
+ * Espacamento entre o menu de opcoes
+ * e o h1 titulo.
+ */
 .wrapper1{
 	color: #44433f;
-	font: 12px "Futura Medium", "Myriad Pro", "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
+	font: 13px "Futura Medium", "Myriad Pro", "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
 	margin: 0 0;
 	margin-top:0px;
 	margin-bottom:0px;
-	line-height:9px; /*Altura padrao das linhas ex: menus de opção*/
+	line-height:9px;                           /*Altura padrao das linhas ex: menus de opção*/
 	padding: 4px 0 0;
 	width:100%;
 
@@ -34,11 +35,12 @@
 	}
 
 /*
- *  controla a distãncia entem o menu o e titulo
+ * controla a distãncia
+ * entre o menu o e titulo
  */
 .wrapper {
-	width: 707px; 		/*Se quiser centralizar é só descomentar esta.*/
-	margin: 0px auto;   /*margem esquerda do dgbrid e alinhamento*/
+	width: 707px; 		                    /*Se quiser centralizar é só descomentar esta.*/
+	margin: 0px auto;                       /*margem esquerda do dgbrid e alinhamento*/
 }
 .nav {
 	background: #fff url(images/nav_bg.png) repeat-x;
@@ -46,7 +48,7 @@
 }
 .nav-wrapper {
 	clear: both;
-	float: center; /* valor anterior -> left */
+	float: center;                          /*update: losangelo: valor anterior -> left */
 }
 
 /* é o inicio do menu a curva */
@@ -61,7 +63,7 @@
 .nav-right {
 	background: url(images/nav_right.png) no-repeat top right;
 	float: left;
-	width: 10px;  /*update: losangelo: 18.11 as 8:45*/
+	width: 10px;                            /*update: losangelo: 18.11 as 8:45*/
 	height: 40px;
 }
 
@@ -96,15 +98,24 @@
 	overflow: hidden;
 	float: left;
 }
-/* controla a barra de menu a esquerda juntamente com a ligacao com o content */
+
+/*
+ * propriedade da ponta ESQUERDA do menu
+ * Complemento da Área branca onde o Texto da Opção de menu fica, o lado da curva.
+ */
 a .menu-left {
 	background: url(images/menu_left.gif) no-repeat left top;
-	width: 8px;
+	width: 6px;
 	height: 32px;
 	line-height: 35px;
 	display: block;
 	float: left;
 }
+
+/*
+ * propriedade do MEIO a do menu
+ * Área branca onde Texto da Opção de menu fica, o CENTRO Do menu.
+ */
 a .menu-mid {
 	background: url(images/menu_mid.gif) repeat-x top left;
 	height: 32px;
@@ -113,10 +124,13 @@ a .menu-mid {
 	float: left;
 }
 
-/*propriedade da ponta direita do menu*/
+/*
+ * propriedade da ponta direita do menu
+ * Complemento da Área branca onde o Texto da Opção de menu fica, o lado da curva.
+ */
 a .menu-right {
 	background: url(images/menu_right.gif) no-repeat top right;
-	width: 3px;   /*update: losangelo: 18.11 as 8:45*/
+	width: 18px;                         /*update: losangelo: 18.11 as 8:45*/
 	height: 32px;
 	line-height: 35px;
 	display: block;
@@ -160,7 +174,7 @@ a .menu-right {
 	margin: 0;
 	padding: 0 12px 10px;
 	list-style: none;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .nav li:hover li,
@@ -202,12 +216,15 @@ a .menu-right {
 	clear: both;
 }
 
-/* Controla área branca onde fica o content (dbgrid) é o box central*/
+/*
+ * Controla área branca onde fica o
+ * CONTEUDO/content (dbgrid) é o box central
+ */
 .content {
 	width: 700px;
 	background: transparent url(images/content_bg.png) repeat-y;
 	float: left;
-	padding: 5px;	/*controla as margens do dbgrig.*/
+	padding: 5px;	                    /* controla as margens do dbgrig. */
 }
 .content h1 {
 	color: #333;
@@ -224,13 +241,14 @@ a .menu-right {
 	margin-bottom: -5px;
 }
 .content p {
-	padding: 0 15px;
+	padding: 2px 15px;                   /*update: losangelo: 18.11 as 8:45 padding:0 15 */
 	text-align: justify;
 }
+
 /*ultima imagem do rodapé*/
 .content-bottom {
     background: transparent url(images/content_bottom.png) no-repeat;
-	width: 707px; /*update: losangelo: 18.11 as 8:45*/
+	width: 707px;                       /*update: losangelo: 18.11 as 8:45*/
 	height: 13px;
 	float: left;
 }
