@@ -1,5 +1,6 @@
 class Hospedagem < ActiveRecord::Base
   belongs_to :cliente
+  belongs_to :reserva
   has_many :produtos_hospedagens
   has_many :produtos, :through => :produtos_hospedagens
 

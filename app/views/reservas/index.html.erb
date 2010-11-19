@@ -14,6 +14,7 @@
     <td><%=h reserva.data %></td>
     <td><%=h reserva.cliente %></td>
     <td><%=h reserva.ativo %></td>
+    <td><%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %></td>
     <td><%= link_to 'Ver', reserva %></td>
     <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
     <td><%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %></td>

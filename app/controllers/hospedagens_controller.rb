@@ -24,7 +24,7 @@ class HospedagensController < ApplicationController
   # GET /hospedagens/new
   # GET /hospedagens/new.xml
   def new
-    @hospedagem = Hospedagem.new
+    @hospedagem = Hospedagem.new(params[:hospedagem])
 
     respond_to do |format|
       format.html # new.html.erb
