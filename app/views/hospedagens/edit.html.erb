@@ -1,7 +1,6 @@
 <h1>Edição de Hospedagem</h1>
 
 <% form_for(@hospedagem) do |f| %>
-  <%= f.error_messages %>
   <%= render :partial => 'formulario', :locals => { :f => f } %>
   <p>
     <%= f.submit 'Atualizar' %>
