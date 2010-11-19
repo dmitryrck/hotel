@@ -7,6 +7,7 @@
     <th>Tipo</th>
     <th>Camas</th>
     <th>Classe</th>
+    <th>Diária</th>
   </tr>
 
 <% @quartos.each do |quarto| %>
@@ -16,6 +17,7 @@
     <td><%=h quarto.tipo_nome %></td>
     <td><%=h quarto.camas %></td>
     <td><%=h quarto.classe_nome %></td>
+    <td><%=h quarto.diaria %></td>
     <td><%= link_to 'Ver', quarto %></td>
     <td><%= link_to 'Editar', edit_quarto_path(quarto) %></td>
     <td><%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %></td>

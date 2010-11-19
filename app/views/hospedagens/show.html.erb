@@ -18,6 +18,11 @@
   <%=h @hospedagem.quarto_id %>
 </p>
 
+<p>
+  <b>Diária</b>
+  <%=h @hospedagem.diaria %>
+</p>
+
 <ul>Consumos:
   <% @hospedagem.produtos_hospedagens.each do |consumo| %>
   <li><%= consumo.hospedagem.cliente_nome %> - <%= consumo.produto.nome %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>

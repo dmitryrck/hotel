@@ -22,6 +22,6 @@ class Quarto < ActiveRecord::Base
   end
 
   def nome
-    "#{andar} #{classe_nome} #{tipo_nome}"
+    "#{andar} andar - classe: #{classe_nome}, tipo: #{tipo_nome} - R$ #{diaria}"
   end
 end
