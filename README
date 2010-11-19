@@ -2,5 +2,6 @@
 
 * cadastro de clientes;
 * cadastro de quartos;
-* nova reserva;
+* nova reserva (que pode criar hospedagem);
+* hospedagem;
 * cadastro de itens consumidos;
