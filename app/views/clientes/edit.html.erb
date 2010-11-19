@@ -1,4 +1,4 @@
-<h1>Editing cliente</h1>
+<h1>Editar cliente</h1>
 
 <% form_for(@cliente) do |f| %>
   <%= f.error_messages %>
@@ -16,9 +16,9 @@
     <%= f.text_area :acompanhate %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Atualizar' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @cliente %> |
-<%= link_to 'Back', clientes_path %>
+<%= link_to 'Ver', @cliente %> |
+<%= link_to 'Todos', clientes_path %>

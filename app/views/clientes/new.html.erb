@@ -1,4 +1,4 @@
-<h1>New cliente</h1>
+<h1>Novo cliente</h1>
 
 <% form_for(@cliente) do |f| %>
   <%= f.error_messages %>
@@ -16,8 +16,8 @@
     <%= f.text_area :acompanhate %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Criar' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', clientes_path %>
+<%= link_to 'Todo', clientes_path %>
