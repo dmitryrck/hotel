@@ -12,10 +12,22 @@
 	font-weight:bolder;
 	-moz-border-radius: 4px 4px 4px 4px;
 }
+	#box_campos a{
+		color: yellow;
+		text-decoration: none;
+	}
+	#box_campos a:hover {
+		color: #09548B;
+	}
+	#box_campos p {
+		margin: 0 0 17px auto;
+		padding: 0;
+		line-height: 10px;
+	}
 
 #BoxPrincipal{
 	position:relative;
-	float:center;				
+	float:center;
 }
 
 #imagemCabec {
@@ -23,9 +35,9 @@
 	position:relative;
 	float:inherit;
 	width: 700px;/*157px;*/
-	height: 121px;	
+	height: 121px;
 	w_left: 3px;
-	
+
 	background-image:url("/images/miraceu_logo1.jpg");
 	background-repeat:repeat-x;
 	-moz-border-right-colors:blue "transparent";
@@ -34,14 +46,14 @@
 	font-family:"Trebuchet MS", "Comic Sans MS";
 	color:#09548B;
 	font-weight: bold;
-	font-style: italic;	
-	
+	font-style: italic;
+
 	position:relative;
-	float: inherit;	
-	
+	float: inherit;
+
 	text-align:center;
 	white-space:pre-line;
-	margin-bottom: -5px;		
+	margin-bottom: -5px;
 }
 
 a.linkto{
@@ -52,7 +64,7 @@ a.linkto{
 	/*width: 62px;*/
 	/*background-color:#057FAC;*/
 	color:#666666;
-	font-size:11px;	
+	font-size:11px;
 	font-weight:bolder;
 	/*-moz-border-radius: 4px 4px 4px 4px;*/
 }
@@ -65,7 +77,7 @@ a.linktoLeft{
 	/*width: 62px;*/
 	/*background-color:#057FAC;*/
 	color:#666666;
-	font-size:11px;	
+	font-size:11px;
 	font-weight:bolder;
 	/*-moz-border-radius: 4px 4px 4px 4px;*/
 }
@@ -79,13 +91,13 @@ a.homelink{
 	background-color:#6490EA;/* #057FAC;*/
 	color:white; /*#FFFFFF;*/
 	text-transform:uppercase;
-	font-size:14px;	
+	font-size:14px;
 	font-weight:bold;
 	font-family:"Trebuchet MS", sans-serif;
-	-moz-border-radius: 8px 8px 8px 8px;		
+	-moz-border-radius: 8px 8px 8px 8px;
 }
 
-a.homelink:hover{	
+a.homelink:hover{
 	background-color:#4883CE; /*#CCFF33;*/
 	text-decoration:none;
 }
@@ -117,5 +129,4 @@ border: 1px solid #82c2d4;
 background: #ebf5f8 url(../images/information.png) no-repeat 5px center;
 color: #000;
 }
-
 
