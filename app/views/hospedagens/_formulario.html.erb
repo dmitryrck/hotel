@@ -1,3 +1,11 @@
+<% if @hospedagem.reserva.present? %>
+  <p>
+    Reservado para: <%= @hospedagem.reserva.cliente %>,<br />
+    para a data: <%= @hospedagem.reserva.data %>
+  </p>
+  <%= f.hidden_field :reserva_id %>
+<% end %>
+
 <p>
   <%= f.label :cliente_id %><br />
   <%= f.collection_select :cliente_id, Cliente.all, :id, :nome, :include_blank => true %>

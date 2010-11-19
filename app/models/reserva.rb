@@ -1,4 +1,6 @@
 class Reserva < ActiveRecord::Base
+  has_one :hospedagem
+
   validates_presence_of :data, :cliente
 
   def ativo
