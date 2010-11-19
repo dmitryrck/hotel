@@ -1,6 +1,6 @@
 <% if @reservas %>
   <h1><%= params[:consulta]['data_reserva(3i)'] %>/<%= params[:consulta]['data_reserva(2i)'] %>/<%= params[:consulta]['data_reserva(1i)'] %></h1>
-  Quantidade de quartos disponíveis: <%= @reservas %>
+  <p>Quantidade de quartos disponíveis: <b><%= @reservas %></b>.<p>
 <% end %>
 
 <% form_for :consulta do |f| %>

@@ -1,18 +1,20 @@
 <h1><%= @hospedagem.cliente_nome %></h1>
 
 <% form_for :consumo, :url => { :controller => :hospedagens, :action => :consumir } do |f| %>
-  <%= label_tag :produto_id %>
-  <%= collection_select :consumo, :produto_id, Produto.all, :id, :nome, :include_blank => true %>
+  <p>
+    <%= label_tag :produto_id %><br />
+    <%= collection_select :consumo, :produto_id, Produto.all, :id, :nome, :include_blank => true %>
+  </p>
 
   <p>
-    <%= label_tag :valor %>
+    <%= label_tag :valor %><br />
     <%= text_field_tag 'consumo[valor]' %>
   </p>
 
   <p>
-    <%= label_tag :quantidade %>
+    <%= label_tag :quantidade %><br />
     <%= text_field_tag 'consumo[quantidade]' %>
   </p>
 
-  <%= submit_tag %>
+  <%= submit_tag 'Adicionar' %>
 <% end %>
