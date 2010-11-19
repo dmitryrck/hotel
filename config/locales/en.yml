@@ -2,4 +2,31 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "Não foi possível gravar {{model}}: 1 erro"
+          other: "Não foi possível gravar {{model}}: {{count}} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      messages:
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: {{count}} caracteres)"
+        too_short: "é muito curto (mínimo: {{count}} caracteres)"
+        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior do que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor do que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+
