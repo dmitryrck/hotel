@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101118152852) do
+ActiveRecord::Schema.define(:version => 20101119025224) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome"
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(:version => 20101118152852) do
     t.integer  "tipo"
     t.integer  "camas"
     t.integer  "classe"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservas", :force => true do |t|
+    t.date     "data"
+    t.string   "cliente"
+    t.boolean  "cancelado",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

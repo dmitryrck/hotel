@@ -1,0 +1,21 @@
+<h1>Nova reserva</h1>
+
+<% form_for(@reserva) do |f| %>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p>
+    <%= f.label :cliente %><br />
+    <%= f.text_field :cliente %>
+  </p>
+  <p>
+    <%= f.label :cancelado %><br />
+    <%= f.check_box :cancelado %>
+  </p>
+  <p>
+    <%= f.submit 'Criar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', reservas_path %>

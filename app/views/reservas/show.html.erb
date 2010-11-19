@@ -1,0 +1,18 @@
+<p>
+  <b>Data:</b>
+  <%=h @reserva.data %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%=h @reserva.cliente %>
+</p>
+
+<p>
+  <b>Cancelado:</b>
+  <%=h @reserva.cancelado %>
+</p>
+
+
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+<%= link_to 'Todos', reservas_path %>

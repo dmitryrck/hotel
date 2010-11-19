@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'reservas/consulta', :controller => 'reservas', :action => 'consulta'
+  map.resources :reservas
+
   map.resources :produtos
 
   map.connect 'sessoes/destroy', :controller => 'sessoes', :action => 'destroy'

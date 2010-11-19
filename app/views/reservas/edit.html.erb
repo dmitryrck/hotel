@@ -1,0 +1,22 @@
+<h1>Editar reserva</h1>
+
+<% form_for(@reserva) do |f| %>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p>
+    <%= f.label :cliente %><br />
+    <%= f.text_field :cliente %>
+  </p>
+  <p>
+    <%= f.label :cancelado %><br />
+    <%= f.check_box :cancelado %>
+  </p>
+  <p>
+    <%= f.submit 'Atualizar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Ver', @reserva %> |
+<%= link_to 'Todos', reservas_path %>
