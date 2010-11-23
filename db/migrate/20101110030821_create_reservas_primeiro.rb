@@ -1,4 +1,4 @@
-class CreateReservas < ActiveRecord::Migration
+class CreateReservasPrimeiro < ActiveRecord::Migration
   def self.up
     create_table :reservas do |t|
       t.integer :cliente_id
