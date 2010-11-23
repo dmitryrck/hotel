@@ -25,7 +25,7 @@
 
 <ul>Consumos:
   <% @hospedagem.produtos_hospedagens.each do |consumo| %>
-  <li><%= consumo.hospedagem.cliente_nome %> - <%= consumo.produto.nome %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>
+  <li><%= consumo.produto.nome if consumo.produto %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>
   <% end %>
 </ul>
 
