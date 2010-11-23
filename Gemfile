@@ -6,3 +6,7 @@ gem 'rails', '2.3.8'
 group :development, :text do
   gem 'sqlite3-ruby'
 end
+
+group :production do
+  gem 'pg'
+end
