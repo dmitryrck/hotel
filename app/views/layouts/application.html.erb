@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>lin4tec Hotel - Sistema de Hotelaria </title>
 
-		<%=stylesheet_link_tag "div"%>
+		<%=stylesheet_link_tag "divs"%>
 		<%=stylesheet_link_tag "menudrop/menu_style"%>
 		<%=stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
 
@@ -48,9 +48,8 @@
 				   				</ul>
 				   				<div class="btm-bg"></div>
 				   		</div>
-
-
 						</li>
+
 				   		<li class="<%= 'active' if controller_name == 'hospedagens' or controller_name == 'reservas' %>">
                                                   <a href="<%= hospedagens_path %>">
 								<span class="menu-left"></span>
@@ -108,7 +107,7 @@
 				<div class="content">
 
 					<%= yield%>	<br>
-					<%=link_to "&laquo; home", root_path, :class=>"homelink"%>
+					<%#=link_to "&laquo; home", root_path, :class=>"homelink"%>
 
 				</div>
 			</div>
