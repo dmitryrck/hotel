@@ -1,12 +1,14 @@
 .sistema{
    text-align: center;
-   padding-left: 350px; 
-   font-size: 35px;
+   padding-left: 400px; 
+   font-size:  25px;
+   margin-top: 20px;
 }
 .lin4{
    text-align: center;
-   padding-left: 300px; 
-   font-size: 25px;  
+   padding-left: 350px; 
+   font-size: 25px;
+   margin-top: 10px;  
 }
 .rodape{
     text-align: center;  
