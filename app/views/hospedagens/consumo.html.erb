@@ -3,7 +3,7 @@
 <% form_for :consumo, :url => { :controller => :hospedagens, :action => :consumir } do |f| %>
   <p>
     <%= label_tag :produto_id %><br />
-    <%= collection_select :consumo, :produto_id, Produto.all, :id, :nome, :include_blank => true %>
+    <%= collection_select :consumo, :produto_id, Produto.all, :id, :nome_e_preco, :include_blank => true %>
   </p>
 
   <p>

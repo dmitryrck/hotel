@@ -2,6 +2,7 @@ class Quarto < ActiveRecord::Base
   has_many :hospedagens
 
   validates_presence_of :numero, :andar, :tipo, :camas, :classe
+  validates_numericality_of :numero, :andar, :camas, :diaria
 
   def tipo_nome
     if self.tipo == 1
