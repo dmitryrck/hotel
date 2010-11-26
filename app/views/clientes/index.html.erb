@@ -16,7 +16,7 @@
 			<%= link_to 'Novo cliente', new_cliente_path, :class=> "linkto" %><br><br>
 		</div>
 
-		<table cellpadding=0 cellspacing=0 >
+		<table id='tabela' cellpadding=0 cellspacing=0 >
 			  <tr>
 				<th width="30%">Nome</th>
 				<th width="22%">Endereco</th>
@@ -34,6 +34,7 @@
 					<%= link_to 'Exibir', cliente, :class=>"linktoLeft" %>
 					<%= link_to 'Editar', edit_cliente_path(cliente), :class=>"linktoLeft" %>
 					<%= link_to 'Apagar', cliente, :confirm => 'Confirma a Eliminação da linha?', :method => :delete, :class=>"linktoLeft" %>
+					<button onclick="doit()">Impressão</button>
 				</td>
 
 			  </tr>

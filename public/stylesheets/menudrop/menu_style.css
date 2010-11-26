@@ -4,31 +4,16 @@
  * lin4tec News
  * ------------------------------------------
  * losangelo@gmail.com
- */
+
+*/
+
+
 
 /*
  * Espacamento entre o menu de opcoes
  * e o h1 titulo.
  */
-
-body{
-     background: #DDD url(images/lin4tec.png) repeat;
-
-/*     opacity:0.4;
-     filter: alpha(opacity:0.5);
-	 KHTMLOpacity: 0.5;
-	 MozOpacity: 0.5;
-	 MozOpacity: 0.5;
-	-khtml-opacity: .50;
-	-ms-filter: "alpha(opacity=50)";
-	-moz-opacity: .50;
-	filter: alpha(opacity=50);
-	opacity: .50;
-	*/
-}
-
-
-.wrapper1{
+ .wrapper1{
 	color: #44433f;
 	font: 13px "Futura Medium", "Myriad Pro", "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
 	margin: 0 0;
@@ -88,7 +73,7 @@ body{
 /* controla distancia entre o menu e o box */
 .nav ul {
 	/*width: 648px; */
-	height: 38px;
+	height: 37px;
 	float: left;
 	margin: 0;
 	padding-top: 3px;

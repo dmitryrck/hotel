@@ -1,4 +1,4 @@
-/* 
+/*
  * 	TableCloth
  * 	by Alen Grakalic, brought to you by cssglobe.com
 */
@@ -9,7 +9,7 @@ body{
 	margin:0;
 	padding:0;
 	background:#D6D6D6;/*#f1f1f1*/
-	font:70% Arial, Helvetica, sans-serif; 
+	font:70% Arial, Helvetica, sans-serif;
 	color:#555;
 	line-height:150%;
 	text-align:left;
@@ -25,7 +25,7 @@ a:hover{
 h1{
 	font-size:140%;
 	margin:0 20px;
-	line-height:80px;	
+	line-height:80px;
 }
 h2{
 	font-size:120%;
@@ -38,7 +38,7 @@ h2{
 	padding-bottom:20px;
 }
 #content{margin:0 20px;}
-p.sig{	
+p.sig{
 	float:left;
 	margin:0;
 	width:680px;
@@ -51,7 +51,7 @@ form{
 }
 
 table, td{
-	font:100% Arial, Helvetica, sans-serif; 
+	font:100% Arial, Helvetica, sans-serif;
 }
 table{width:100%;border-collapse:collapse;margin:1em 0;}
 th, td{text-align:left;padding:.5em;border:1px solid #fff;}
@@ -73,3 +73,4 @@ td.selected, tr.even td.selected, tr.odd td.selected{background:#bce774;color:#5
 
 /* use this if you want to apply different styleing to empty table cells*/
 td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+

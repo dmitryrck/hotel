@@ -38,7 +38,7 @@
 	height: 121px;
 	w_left: 3px;
 
-	background-image:url("/images/miraceu_logo1.jpg");
+	background-image:url("/images/lin4tec.pgn");
 	background-repeat:repeat-x;
 	-moz-border-right-colors:blue "transparent";
 
@@ -48,11 +48,11 @@
 	font-weight: bold;
 	font-style: italic;
 
-	position:relative;
-	float: inherit;
+	*/ position:relative;
+	float: inherit;*/
 
 	text-align:center;
-	white-space:pre-line;
+	white-space: inherit;
 	margin-bottom: -5px;
 }
 
