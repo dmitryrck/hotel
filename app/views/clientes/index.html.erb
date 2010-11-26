@@ -1,7 +1,3 @@
-<%=stylesheet_link_tag "divs"%>
-<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
-<%= javascript_include_tag "tablecloth"%>
-
 <div id="Cabecalho">
 	<h1>Relação de Clientes</h1>
 </div>
@@ -12,16 +8,14 @@
 <div id="container">
 	<div id="content">
 
-		<div id="box_campos">
 			<%= link_to 'Novo cliente', new_cliente_path, :class=> "linkto" %><br><br>
-		</div>
 
 		<table id='tabela' cellpadding=0 cellspacing=0 >
 			  <tr>
-				<th width="30%">Nome</th>
-				<th width="22%">Endereco</th>
-				<th width="3%">Acompanhate</th>
-				<th width="20%">CONTROLE de Ações</th>
+				<th>Nome</th>
+				<th>Endereco</th>
+				<th>Acompanhate</th>
+				<th>Controle de Ações</th>
 			  </tr>
 
 			<% @clientes.each do |cliente| %>
@@ -34,18 +28,14 @@
 					<%= link_to 'Exibir', cliente, :class=>"linktoLeft" %>
 					<%= link_to 'Editar', edit_cliente_path(cliente), :class=>"linktoLeft" %>
 					<%= link_to 'Apagar', cliente, :confirm => 'Confirma a Eliminação da linha?', :method => :delete, :class=>"linktoLeft" %>
-					<button onclick="doit()">Impressão</button>
 				</td>
 
 			  </tr>
 			<% end %>
 		</table>
-
-		<div id="box_campos">
+		
 			<%= link_to 'Novo cliente', new_cliente_path, :class=> "linkto" %><br><br>
-		</div>
 
  </div>
 
 </div>
-

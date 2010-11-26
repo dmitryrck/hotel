@@ -1,5 +1,8 @@
 <h1>Quartos</h1>
 
+<div id="container">
+	<div id="content">
+
 <table>
   <tr>
     <th>Numero</th>
@@ -8,6 +11,7 @@
     <th>Camas</th>
     <th>Classe</th>
     <th>Diária</th>
+    <th>Controle de Ações</th>
   </tr>
 
 <% @quartos.each do |quarto| %>
@@ -18,9 +22,11 @@
     <td><%=h quarto.camas %></td>
     <td><%=h quarto.classe_nome %></td>
     <td><%=h quarto.diaria %></td>
-    <td><%= link_to 'Ver', quarto %></td>
-    <td><%= link_to 'Editar', edit_quarto_path(quarto) %></td>
-    <td><%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %></td>
+    <td>
+      <%= link_to 'Ver', quarto %>
+      <%= link_to 'Editar', edit_quarto_path(quarto) %>
+      <%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
@@ -28,3 +34,5 @@
 <br />
 
 <%= link_to 'Novo quarto', new_quarto_path %>
+</div>
+</div>

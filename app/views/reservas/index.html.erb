@@ -1,5 +1,7 @@
 <h1>Reservas</h1>
 
+<div id="container">
+	<div id="content">
 <p><%= link_to 'Consulta', { :controller => :reservas, :action => :consulta } %></p>
 
 <table>
@@ -7,6 +9,7 @@
     <th>Data</th>
     <th>Cliente</th>
     <th>Ativo</th>
+    <th>Controle de Ações</th>
   </tr>
 
 <% @reservas.each do |reserva| %>
@@ -14,10 +17,12 @@
     <td><%=h reserva.data %></td>
     <td><%=h reserva.cliente %></td>
     <td><%=h reserva.ativo %></td>
-    <td><%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %></td>
-    <td><%= link_to 'Ver', reserva %></td>
-    <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
-    <td><%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %></td>
+    <td>
+      <%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %>
+      <%= link_to 'Ver', reserva %>
+      <%= link_to 'Editar', edit_reserva_path(reserva) %>
+      <%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
@@ -25,3 +30,5 @@
 <br />
 
 <%= link_to 'Nova reserva', new_reserva_path %>
+</div>
+</div>
