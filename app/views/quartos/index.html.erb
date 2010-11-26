@@ -1,30 +1,55 @@
-<h1>Quartos</h1>
+<%=stylesheet_link_tag "divs"%>
+<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
+<%= javascript_include_tag "tablecloth"%>
 
-<table>
-  <tr>
-    <th>Numero</th>
-    <th>Andar</th>
-    <th>Tipo</th>
-    <th>Camas</th>
-    <th>Classe</th>
-    <th>Diária</th>
-  </tr>
+<div id="Cabecalho">
+	<h1>Relação de Quartos</h1>
+</div>
 
-<% @quartos.each do |quarto| %>
-  <tr>
-    <td><%=h quarto.numero %></td>
-    <td><%=h quarto.andar %></td>
-    <td><%=h quarto.tipo_nome %></td>
-    <td><%=h quarto.camas %></td>
-    <td><%=h quarto.classe_nome %></td>
-    <td><%=h quarto.diaria %></td>
-    <td><%= link_to 'Ver', quarto %></td>
-    <td><%= link_to 'Editar', edit_quarto_path(quarto) %></td>
-    <td><%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<br><br>
 
-<br />
+<div id="container">
+	<div id="content">
 
-<%= link_to 'Novo quarto', new_quarto_path %>
+        <div id="box_campos">
+          <%= link_to 'Novo quarto', new_quarto_path %>
+        </div>
+
+        <table>
+          <tr>
+            <th>Numero</th>
+            <th>Andar</th>
+            <th>Tipo</th>
+            <th>Camas</th>
+            <th>Classe</th>
+            <th>Diária</th>
+            <th width="20%">CONTROLE de Ações</th>
+          </tr>
+
+        <% @quartos.each do |quarto| %>
+          <tr>
+            <td><%=h quarto.numero %></td>
+            <td><%=h quarto.andar %></td>
+            <td><%=h quarto.tipo_nome %></td>
+            <td><%=h quarto.camas %></td>
+            <td><%=h quarto.classe_nome %></td>
+            <td><%=h quarto.diaria %></td>
+            <td>
+              <%= link_to 'Ver', quarto %>
+              <%= link_to 'Editar', edit_quarto_path(quarto) %>
+              <%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %>
+            </td>
+           </tr>
+        <% end %>
+        </table>
+
+        <br />
+
+        <div id="box_campos">
+           <%= link_to 'Novo quarto', new_quarto_path %>
+	  	  </div>
+
+ </div>
+
+</div>
+

@@ -1,21 +1,41 @@
+<%=stylesheet_link_tag "divs"%>
+<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
+<%= javascript_include_tag "tablecloth"%>
+
 <h1>Usuários do Sistema</h1>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Login</th>
-  </tr>
+<div id="container">
+	<div id="content">
 
-<% @usuarios.each do |usuario| %>
-  <tr>
-    <td><%= link_to usuario.nome, usuario %></td>
-    <td><%=h usuario.login %></td>
-    <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Apagar', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+      <div id="box_campos">
+          <%= link_to 'Novo Usuário', new_usuario_path %>
+      </div>
 
-<br />
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Login</th>
+          <th width="20%">CONTROLE de Ações</th>
+        </tr>
 
-<%= link_to 'Novo Usuário', new_usuario_path %>
+      <% @usuarios.each do |usuario| %>
+        <tr>
+          <td><%= link_to usuario.nome, usuario %></td>
+          <td><%=h usuario.login %></td>
+          <td>
+            <%= link_to 'Editar', edit_usuario_path(usuario) %>
+            <%= link_to 'Apagar', usuario, :confirm => 'Are you sure?', :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+
+      <br />
+
+      <div id="box_campos">
+          <%= link_to 'Novo Usuário', new_usuario_path %>
+      </div>
+
+</div>
+</div>
+
