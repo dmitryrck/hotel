@@ -12,11 +12,11 @@
 </p>
 <p>
   <%= f.label :data_reserva %><br />
-  <%= f.date_select :data_reserva %>
+  <%= f.text_field :data_reserva_formatada, :class => :data %>
 </p>
 <p>
   <%= f.label :data_fim %><br />
-  <%= f.date_select :data_fim %>
+  <%= f.text_field :data_fim_formatada, :class => :data %>
 </p>
 <p>
   <%= f.label :quarto_id %><br />

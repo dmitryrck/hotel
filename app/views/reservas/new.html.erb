@@ -1,18 +1,7 @@
 <h1>Nova reserva</h1>
 
 <% form_for(@reserva) do |f| %>
-  <p>
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
-  </p>
-  <p>
-    <%= f.label :cliente %><br />
-    <%= f.text_field :cliente %>
-  </p>
-  <p>
-    <%= f.label :cancelado %><br />
-    <%= f.check_box :cancelado %>
-  </p>
+  <%= render 'formulario', :f => f %>
   <p>
     <%= f.submit 'Criar' %>
   </p>

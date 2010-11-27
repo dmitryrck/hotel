@@ -16,10 +16,10 @@
 
           <% @hospedagens.each do |hospedagem| %>
             <tr>
-              <td><%=h hospedagem.cliente_id %></td>
-              <td><%=h hospedagem.data_reserva %></td>
-              <td><%=h hospedagem.data_fim %></td>
-              <td><%=h hospedagem.quarto_id %></td>
+              <td><%=h hospedagem.cliente_nome %></td>
+              <td><%=h l hospedagem.data_reserva %></td>
+              <td><%=h l hospedagem.data_fim %></td>
+              <td><%=h hospedagem.quarto_nome %></td>
               <td>
                 <%= link_to 'Ver', hospedagem %>
                 <%= link_to 'Adicionar Consumo', { :controller => :hospedagens, :action => :consumo, :id => hospedagem.id } %>
