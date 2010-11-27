@@ -1,26 +1,15 @@
-<%=stylesheet_link_tag "divs"%>
-<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
-<%= javascript_include_tag "tablecloth"%>
-
-<div id="Cabecalho">
-	<h1>Produtos</h1>
-</div>
-
-<br><br>
+<h1>Produtos</h1>
 
 <div id="container">
 	<div id="content">
 
-          <div id="box_campos">
             <%= link_to 'Novo produto', new_produto_path %>
-          </div>
-
 
           <table>
             <tr>
               <th>Nome</th>
               <th>Preco</th>
-               <th width="20%">CONTROLE de Ações</th>
+               <th>CONTROLE de Ações</th>
             </tr>
 
           <% @produtos.each do |produto| %>
@@ -38,7 +27,7 @@
 
           <br />
 
-          <div id="box_campos">
             <%= link_to 'Novo produto', new_produto_path %>
-          </div>
+  </div>
+</div>
 

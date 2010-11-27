@@ -1,52 +1,39 @@
-<%=stylesheet_link_tag "divs"%>
-<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
-<%= javascript_include_tag "tablecloth"%>
 
-<div id="Cabecalho">
-	<h1>Reservas</h1>
-</div>
-
-<br><br>
+<h1>Reservas</h1>
 
 <div id="container">
 	<div id="content">
 
-       <div id="box_campos">
-         <%= link_to 'Nova reserva', new_reserva_path %>
-         <p><%= link_to 'Consulta', { :controller => :reservas, :action => :consulta } %></p>
-       </div>
+  <p><%= link_to 'Consulta', { :controller => :reservas, :action => :consulta } %></p>
 
-    <table>
-      <tr>
-        <th>Data</th>
-        <th>Cliente</th>
-        <th>Ativo</th>
-        <th width="20%">CONTROLE de Ações</th>
-      </tr>
+  <%= link_to 'Nova reserva', new_reserva_path %>
 
-    <% @reservas.each do |reserva| %>
-      <tr>
-        <td><%=h reserva.data %></td>
-        <td><%=h reserva.cliente %></td>
-        <td><%=h reserva.ativo %></td>
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Cliente</th>
+    <th>Ativo</th>
+    <th>Controle de Ações</th>
+  </tr>
 
-        <td>
-          <%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %>
-          <%= link_to 'Ver', reserva %>
-          <%= link_to 'Editar', edit_reserva_path(reserva) %>
-          <%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %>
-        </td>
-      </tr>
-    <% end %>
-    </table>
+<% @reservas.each do |reserva| %>
+  <tr>
+    <td><%=h reserva.data %></td>
+    <td><%=h reserva.cliente %></td>
+    <td><%=h reserva.ativo %></td>
+    <td>
+      <%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %>
+      <%= link_to 'Ver', reserva %>
+      <%= link_to 'Editar', edit_reserva_path(reserva) %>
+      <%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
 
-    <br />
+<br />
 
-      <div id="box_campos">
-         <%= link_to 'Nova reserva', new_reserva_path %>
-      </div>
-
- </div>
-
+<%= link_to 'Nova reserva', new_reserva_path %>
+  </div>
 </div>
 

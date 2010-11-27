@@ -4,6 +4,9 @@ class Hospedagem < ActiveRecord::Base
   has_many :produtos_hospedagens
   has_many :produtos, :through => :produtos_hospedagens
 
+  validates_presence_of :cliente, :data_reserva, :date_fim, :quarto
+  validates_numericality_of :diaria
+
   def cliente_nome
     self.cliente.nome if self.cliente
   end

@@ -1,19 +1,9 @@
-<%=stylesheet_link_tag "divs"%>
-<%= stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
-<%= javascript_include_tag "tablecloth"%>
-
-<div id="Cabecalho">
-	<h1>Relação de Quartos</h1>
-</div>
-
-<br><br>
+<h1>Quartos</h1>
 
 <div id="container">
 	<div id="content">
 
-        <div id="box_campos">
           <%= link_to 'Novo quarto', new_quarto_path %>
-        </div>
 
         <table>
           <tr>
@@ -23,7 +13,7 @@
             <th>Camas</th>
             <th>Classe</th>
             <th>Diária</th>
-            <th width="20%">CONTROLE de Ações</th>
+            <th>CONTROLE de Ações</th>
           </tr>
 
         <% @quartos.each do |quarto| %>
@@ -45,11 +35,8 @@
 
         <br />
 
-        <div id="box_campos">
            <%= link_to 'Novo quarto', new_quarto_path %>
-	  	  </div>
 
  </div>
-
 </div>
 
