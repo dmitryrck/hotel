@@ -90,4 +90,16 @@ class HospedagensController < ApplicationController
     @hospedagem.adicionar_consumo(params[:consumo])
     redirect_to @hospedagem
   end
+
+  def finalizar
+    @hospedagem = Hospedagem.find(params[:id])
+    @hospedagem.contabilizar_e_finalizar!
+    redirect_to @hospedagem
+  end
+
+  def contabilizar
+    @hospedagem = Hospedagem.find(params[:id])
+    @hospedagem.contabilizar!
+    redirect_to @hospedagem
+  end
 end

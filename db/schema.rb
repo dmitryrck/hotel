@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101123150258) do
+ActiveRecord::Schema.define(:version => 20101128235057) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20101123150258) do
     t.float    "diaria"
     t.float    "total"
     t.integer  "reserva_id"
+    t.boolean  "finalizado",   :default => false
   end
 
   create_table "produtos", :force => true do |t|

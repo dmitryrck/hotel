@@ -44,4 +44,40 @@ class Hospedagem < ActiveRecord::Base
   def quarto_nome
     "#{quarto.andar} andar - classe: #{quarto.classe_nome}, tipo: #{quarto.tipo_nome}" if quarto
   end
+
+  def valor_consumo
+    self.produtos_hospedagens.sum(:valor_total)
+  end
+
+  def contabilizar
+    self.total = calculo_total_diaria + valor_consumo
+  end
+
+  def contabilizar!
+    self.contabilizar
+    self.save
+  end
+
+  def finalizar
+    self.finalizado = true
+  end
+
+  def finalizar!
+    self.finalizar
+    self.save
+  end
+
+  def contabilizar_e_finalizar!
+    self.contabilizar
+    self.finalizar
+    self.save
+  end
+
+  def estado
+    finalizado? ? "finalizado" : "ativo"
+  end
+
+  def self.quartos_em(data)
+    Quarto.count - self.count(:conditions => ['data_reserva <= ? and data_fim >= ?', data, data])
+  end
 end
