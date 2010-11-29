@@ -1,4 +1,9 @@
 <p>
+  <%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+  <%= link_to 'Todos', reservas_path %>
+</p>
+
+<p>
   <b>Data:</b>
   <%=h l @reserva.data %>
 </p>
@@ -13,6 +18,7 @@
   <%=h @reserva.ativo %>
 </p>
 
-
-<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
-<%= link_to 'Todos', reservas_path %>
+<p>
+  <%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+  <%= link_to 'Todos', reservas_path %>
+</p>

@@ -1,4 +1,9 @@
 <p>
+  <%= link_to 'Editar', edit_quarto_path(@quarto) %> |
+  <%= link_to 'Voltar', quartos_path %>
+</p>
+
+<p>
   <b>Numero:</b>
   <%=h @quarto.numero %>
 </p>
@@ -23,12 +28,12 @@
   <%=h @quarto.classe_nome %>
 </p>
 
-<p>
-  <b>Reservas:</b>
+<p><b>Reservas:</b></p>
+<ul>
   <% @quarto.hospedagens.sort(&:data_reserva).each do |reserva| %>
-    <p><%= link_to reserva.data_reserva, reserva %></p>
+    <li><%= link_to reserva.data_reserva, reserva %></li>
   <% end %>
-</p>
+</ul>
 
 <p>
   <%= link_to 'Editar', edit_quarto_path(@quarto) %> |

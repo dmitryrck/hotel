@@ -1,5 +1,7 @@
 <h1>Novo produto</h1>
 
+<p><%= link_to 'Voltar', produtos_path %></p>
+
 <% form_for(@produto) do |f| %>
   <p>
     <%= f.label :nome %><br />
@@ -14,4 +16,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Voltar', produtos_path %>
+<p><%= link_to 'Voltar', produtos_path %></p>

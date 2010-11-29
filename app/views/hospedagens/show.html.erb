@@ -38,7 +38,7 @@
   <p>Consumos:</p>
   <ul>
     <% @hospedagem.produtos_hospedagens.each do |consumo| %>
-    <li><%= consumo.produto.nome if consumo.produto %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>
+      <li><%= consumo.produto.nome if consumo.produto %> - R$ <%= consumo.valor %> - <%= consumo.quantidade %> - R$ <%= consumo.valor_total %></li>
     <% end %>
   </ul>
 <% else %>

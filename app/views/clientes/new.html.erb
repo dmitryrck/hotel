@@ -1,5 +1,7 @@
 <h1>Novo cliente</h1>
 
+<p><%= link_to 'Todos', clientes_path %></p>
+
 <% form_for(@cliente) do |f| %>
   <p>
     <%= f.label :nome %><br />
@@ -18,4 +20,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Todo', clientes_path %>
+<p><%= link_to 'Todos', clientes_path %></p>

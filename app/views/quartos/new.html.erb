@@ -1,5 +1,7 @@
 <h1>Novo quarto</h1>
 
+<p><%= link_to 'Voltar', quartos_path %></p>
+
 <% form_for(@quarto) do |f| %>
   <p>
     <%= f.label :numero %><br />
@@ -11,13 +13,10 @@
   </p>
   <p>
     <%= f.label :tipo %><br />
-    <%#= f.text_field :tipo %>
-	<select name="quarto[tipo]">
-				<option value="1">Solteiro</option>
-				<option value="2">Casal</option>
-				
-			</select>
-		
+    <select name="quarto[tipo]">
+      <option value="1">Solteiro</option>
+      <option value="2">Casal</option>
+    </select>
   </p>
   <p>
     <%= f.label :camas %><br />
@@ -25,13 +24,12 @@
   </p>
   <p>
     <%= f.label :classe %><br />
-    <%#= f.text_field :classe %>
-	<select name="quarto[classe]">
-				<option value="1">Apartamento</option>
-				<option value="2">Suite</option>
-				<option value="3">Master</option>
-				
-			</select>
+    <select name="quarto[classe]">
+      <option value="1">Apartamento</option>
+      <option value="2">Suite</option>
+      <option value="3">Master</option>
+
+    </select>
   </p>
   <p>
     <%= f.label :diaria %><br />

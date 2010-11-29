@@ -1,4 +1,9 @@
 <p>
+  <%= link_to 'Editar', edit_produto_path(@produto) %> |
+  <%= link_to 'Voltar', produtos_path %>
+</p>
+
+<p>
   <b>Nome:</b>
   <%=h @produto.nome %>
 </p>
@@ -8,6 +13,7 @@
   <%=h @produto.preco %>
 </p>
 
-
-<%= link_to 'Editar', edit_produto_path(@produto) %> |
-<%= link_to 'Voltar', produtos_path %>
+<p>
+  <%= link_to 'Editar', edit_produto_path(@produto) %> |
+  <%= link_to 'Voltar', produtos_path %>
+</p>

@@ -1,5 +1,10 @@
 <h1>Editar reserva</h1>
 
+<p>
+  <%= link_to 'Ver', @reserva %> |
+  <%= link_to 'Todos', reservas_path %>
+</p>
+
 <% form_for(@reserva) do |f| %>
   <%= render 'formulario', :f => f %>
   <p>
@@ -7,5 +12,7 @@
   </p>
 <% end %>
 
-<%= link_to 'Ver', @reserva %> |
-<%= link_to 'Todos', reservas_path %>
+<p>
+  <%= link_to 'Ver', @reserva %> |
+  <%= link_to 'Todos', reservas_path %>
+</p>

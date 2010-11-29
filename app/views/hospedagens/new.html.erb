@@ -1,5 +1,7 @@
 <h1>Nova Hospedagem</h1>
 
+<p><%= link_to 'Todos', hospedagens_path %></p>
+
 <% form_for(@hospedagem) do |f| %>
   <%= render :partial => 'formulario', :locals => { :f => f } %>
   <p>
@@ -7,4 +9,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Todos', hospedagens_path %>
+<p><%= link_to 'Todos', hospedagens_path %></p>

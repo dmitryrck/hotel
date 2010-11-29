@@ -1,4 +1,9 @@
 <p>
+  <%= link_to 'Editar', edit_cliente_path(@cliente) %> |
+  <%= link_to 'Todos', clientes_path %>
+</p>
+
+<p>
   <b>Nome:</b>
   <%=h @cliente.nome %>
 </p>
@@ -13,6 +18,7 @@
   <%=h @cliente.acompanhate %>
 </p>
 
-
-<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
-<%= link_to 'Todos', clientes_path %>
+<p>
+  <%= link_to 'Editar', edit_cliente_path(@cliente) %> |
+  <%= link_to 'Todos', clientes_path %>
+</p>
