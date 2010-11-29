@@ -1,33 +1,30 @@
 <h1>Produtos</h1>
 
 <div id="container">
-	<div id="content">
+  <div id="content">
 
-            <%= link_to 'Novo produto', new_produto_path %>
+    <p><%= link_to 'Novo produto', new_produto_path, :class => :linkto %></p>
 
-          <table>
-            <tr>
-              <th>Nome</th>
-              <th>Preco</th>
-               <th>CONTROLE de Ações</th>
-            </tr>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Preco</th>
+        <th>Ações</th>
+      </tr>
 
-          <% @produtos.each do |produto| %>
-            <tr>
-              <td><%=h produto.nome %></td>
-              <td><%=h produto.preco %></td>
-              <td>
-                <%= link_to 'Ver', produto %>
-                <%= link_to 'Editar', edit_produto_path(produto) %>
-                <%= link_to 'Apagar', produto, :confirm => 'Certeza?', :method => :delete %>
-              </td>
-            </tr>
-          <% end %>
-          </table>
+      <% @produtos.each do |produto| %>
+        <tr>
+          <td><%=h produto.nome %></td>
+          <td><%=h produto.preco %></td>
+          <td>
+            <%= link_to 'Ver', produto %>
+            <%= link_to 'Editar', edit_produto_path(produto) %>
+            <%= link_to 'Apagar', produto, :confirm => 'Certeza?', :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
 
-          <br />
-
-            <%= link_to 'Novo produto', new_produto_path %>
+    <p><%= link_to 'Novo produto', new_produto_path, :class => :linkto %></p>
   </div>
 </div>
-

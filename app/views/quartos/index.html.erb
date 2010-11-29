@@ -1,42 +1,38 @@
 <h1>Quartos</h1>
 
 <div id="container">
-	<div id="content">
+  <div id="content">
 
-          <%= link_to 'Novo quarto', new_quarto_path %>
+    <p><%= link_to 'Novo quarto', new_quarto_path, :class => :linkto %></p>
 
-        <table>
-          <tr>
-            <th>Numero</th>
-            <th>Andar</th>
-            <th>Tipo</th>
-            <th>Camas</th>
-            <th>Classe</th>
-            <th>Diária</th>
-            <th>CONTROLE de Ações</th>
-          </tr>
+    <table>
+      <tr>
+        <th>Numero</th>
+        <th>Andar</th>
+        <th>Tipo</th>
+        <th>Camas</th>
+        <th>Classe</th>
+        <th>Diária</th>
+        <th>Ações</th>
+      </tr>
 
-        <% @quartos.each do |quarto| %>
-          <tr>
-            <td><%=h quarto.numero %></td>
-            <td><%=h quarto.andar %></td>
-            <td><%=h quarto.tipo_nome %></td>
-            <td><%=h quarto.camas %></td>
-            <td><%=h quarto.classe_nome %></td>
-            <td><%=h quarto.diaria %></td>
-            <td>
-              <%= link_to 'Ver', quarto %>
-              <%= link_to 'Editar', edit_quarto_path(quarto) %>
-              <%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %>
-            </td>
-           </tr>
-        <% end %>
-        </table>
+      <% @quartos.each do |quarto| %>
+        <tr>
+          <td><%=h quarto.numero %></td>
+          <td><%=h quarto.andar %></td>
+          <td><%=h quarto.tipo_nome %></td>
+          <td><%=h quarto.camas %></td>
+          <td><%=h quarto.classe_nome %></td>
+          <td><%=h quarto.diaria %></td>
+          <td>
+            <%= link_to 'Ver', quarto %>
+            <%= link_to 'Editar', edit_quarto_path(quarto) %>
+            <%= link_to 'Apagar', quarto, :confirm => 'Voce tem certeza?', :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
 
-        <br />
-
-           <%= link_to 'Novo quarto', new_quarto_path %>
-
- </div>
+    <p><%= link_to 'Novo quarto', new_quarto_path, :class => :linkto %></p>
+  </div>
 </div>
-

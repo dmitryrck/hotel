@@ -1,39 +1,34 @@
 <h1>Hospedagem</h1>
 
 <div id="container">
-	<div id="content">
-    <p>
-      Quartos sem hospedagens hoje: <%= Hospedagem.quartos_em(Date.today) %>,
-    </p>
+  <div id="content">
+    <p>Quartos sem hospedagens hoje: <%= Hospedagem.quartos_em(Date.today) %>.</p>
 
-          <%= link_to 'Nova Hospedagem', new_hospedagem_path %>
+    <%= link_to 'Nova Hospedagem', new_hospedagem_path, :class => :linkto %>
 
-          <table>
-            <tr>
-              <th>Cliente</th>
-              <th>Data reserva</th>
-              <th>Data fim</th>
-              <th>Quarto</th>
-              <th>Estado</th>
-              <th>Ações</th>
-            </tr>
+    <table>
+      <tr>
+        <th>Cliente</th>
+        <th>Data reserva</th>
+        <th>Data fim</th>
+        <th>Quarto</th>
+        <th>Estado</th>
+        <th>Ações</th>
+      </tr>
 
-          <% @hospedagens.each do |hospedagem| %>
-            <tr>
-              <td><%=h hospedagem.cliente_nome %></td>
-              <td><%=h l hospedagem.data_reserva %></td>
-              <td><%=h l hospedagem.data_fim %></td>
-              <td><%=h hospedagem.quarto_nome %></td>
-              <td><%= hospedagem.estado %></td>
-              <td><%= link_to 'Ver', hospedagem %></td>
-            </tr>
-          <% end %>
-          </table>
+      <% @hospedagens.each do |hospedagem| %>
+        <tr>
+          <td><%=h hospedagem.cliente_nome %></td>
+          <td><%=h l hospedagem.data_reserva %></td>
+          <td><%=h l hospedagem.data_fim %></td>
+          <td><%=h hospedagem.quarto_nome %></td>
+          <td><%= hospedagem.estado %></td>
+          <td><%= link_to 'Ver', hospedagem %></td>
+        </tr>
+      <% end %>
+    </table>
 
-          <br />
+    <%= link_to 'Nova Hospedagem', new_hospedagem_path, :class => :linkto %>
 
-              <%= link_to 'Nova Hospedagem', new_hospedagem_path %>
-
- </div>
+  </div>
 </div>
-
