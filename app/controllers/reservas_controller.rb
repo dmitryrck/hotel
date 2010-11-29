@@ -83,8 +83,8 @@ class ReservasController < ApplicationController
 
   def consulta
     if params[:consulta]
-      data = "#{params[:consulta]['data_reserva(1i)']}-#{params[:consulta]['data_reserva(2i)']}-#{params[:consulta]['data_reserva(3i)']}"
-      @reservas = Reserva.quartos_em(data) if params[:consulta]
+      data = params[:consulta][:data_reserva].data_do_br
+      @reservas = Reserva.quartos_em(data)
     end
   end
 end

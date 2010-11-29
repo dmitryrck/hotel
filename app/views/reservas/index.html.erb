@@ -1,39 +1,37 @@
-
 <h1>Reservas</h1>
 
 <div id="container">
-	<div id="content">
+  <div id="content">
+    <p>
+      Quartos sem reservas hoje: <%= Reserva.quartos_em(Date.today) %>,
+      <%= link_to 'consultar outros dias', { :controller => :reservas, :action => :consulta } %>
+    </p>
 
-  <p><%= link_to 'Consulta', { :controller => :reservas, :action => :consulta } %></p>
+    <p><%= link_to 'Nova reserva', new_reserva_path, :class => :linkto %></p>
 
-  <%= link_to 'Nova reserva', new_reserva_path %>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Cliente</th>
+        <th>Ativo</th>
+        <th>Controle de Ações</th>
+      </tr>
 
-<table>
-  <tr>
-    <th>Data</th>
-    <th>Cliente</th>
-    <th>Ativo</th>
-    <th>Controle de Ações</th>
-  </tr>
+      <% @reservas.each do |reserva| %>
+        <tr>
+          <td><%=h l reserva.data %></td>
+          <td><%=h reserva.cliente %></td>
+          <td><%=h reserva.ativo %></td>
+          <td>
+            <%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %>
+            <%= link_to 'Ver', reserva %>
+            <%= link_to 'Editar', edit_reserva_path(reserva) %>
+            <%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
 
-<% @reservas.each do |reserva| %>
-  <tr>
-    <td><%=h l reserva.data %></td>
-    <td><%=h reserva.cliente %></td>
-    <td><%=h reserva.ativo %></td>
-    <td>
-      <%= link_to 'Tornar hospedagem', { :controller => :hospedagens, :action => :new, :hospedagem => { :reserva_id => reserva.id } } %>
-      <%= link_to 'Ver', reserva %>
-      <%= link_to 'Editar', edit_reserva_path(reserva) %>
-      <%= link_to 'Apagar', reserva, :confirm => 'Tem certeza?', :method => :delete %>
-    </td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'Nova reserva', new_reserva_path %>
+    <p><%= link_to 'Nova reserva', new_reserva_path, :class => :linkto %></p>
   </div>
 </div>
-
