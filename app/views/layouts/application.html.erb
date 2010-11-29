@@ -1,133 +1,78 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>lin4tec Hotel - Sistema de Hotelaria </title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>lin4tec Hotel - Sistema de Hotelaria </title>
+    <%= stylesheet_link_tag 'divs', 'formatacao', 'menudrop/menu_style', 'tablecloth/tablecloth/tablecloth' %>
+  </head>
 
-		<%=stylesheet_link_tag "divs", "formatacao" %>
-		<%=stylesheet_link_tag "menudrop/menu_style"%>
-		<%=stylesheet_link_tag "tablecloth/tablecloth/tablecloth"%>
+  <body>
+    <div id="imagemCabec">
+      <div class="sistema">Sistema de Hotelaria</div>
+      <div class="lin4">Lin4tec Projetos</div>
+    </div>
 
-    <%= javascript_include_tag "jquery", "jquery-ui", "application" %>
-	</head>
+    <div class="wrapper1">
+      <div class="wrapper">
+        <div class="nav-wrapper">
+          <div class="nav-left"></div>
+          <div class="nav">
+            <ul id="navigation">
+              <li class="<%= 'active' if controller_name == 'home'%>">
+                <a href= '<%= root_path %>' >
+                  <span class="menu-left"></span>
+                  <span class="menu-mid"> Home </span>
+                  <span class="menu-right"></span>
+                </a>
+              </li>
 
-	<body>
+              <li class="<%= 'active' if controller_name == 'quartos' or controller_name == 'clientes' or controller_name == 'produtos' %>">
+                <a href="#">
+                  <span class="menu-left"></span>
+                  <span class="menu-mid">Cadastros</span>
+                  <span class="menu-right"></span>
+                </a>
+                <div class="sub">
+                  <ul>
+                    <li><%= link_to 'Quartos', quartos_path %></li>
+                    <li><%= link_to 'Clientes', clientes_path %></li>
+                    <li><%= link_to 'Produtos', produtos_path %></li>
+                  </ul>
+                  <div class="btm-bg"></div>
+                </div>
+              </li>
 
-			<div id="imagemCabec">
-			<div class="sistema">Sistema de Hotelaria </div>
-			<div class="lin4">Lin4tec Projetos</div>
-			
-		</div>
-	
-
-	<div class="wrapper1">
-		<div class="wrapper">
-			<div class="nav-wrapper">
-				<div class="nav-left"></div>
-				<div class="nav">
-					<ul id="navigation">
-				   		<li class="<%= 'active' if controller_name == 'home'%>">
-							<a href= '<%= root_path %>' >
-								<span class="menu-left"></span>
-								<span class="menu-mid"> Home </span>
-								<span class="menu-right"></span>
-							</a>
-						</li>
-
-				   		<li class="<%= 'active' if controller_name == 'quartos' or controller_name == 'clientes' or controller_name == 'produtos' %>">
-							<a href="#">
-								<span class="menu-left"></span>
-								<span class="menu-mid">Cadastros</span>
-								<span class="menu-right"></span>
-							</a>
-		          <div class="sub">
-				   				<ul>
-									<li><%= link_to 'Quartos', quartos_path %></li>
-									<li><%= link_to 'Clientes', clientes_path %></li>
-									<li><%= link_to 'Produtos', produtos_path %></li>
-				   				</ul>
-				   				<div class="btm-bg"></div>
-				   		</div>
-						</li>
-
-				   		<li class="<%= 'active' if controller_name == 'hospedagens' or controller_name == 'reservas' %>">
-                                                  <a href="<%= hospedagens_path %>">
-								<span class="menu-left"></span>
-								<span class="menu-mid">Hospedagem</span>
-								<span class="menu-right"></span>
-							</a>
-				   			<div class="sub">
-				   				<ul>
+              <li class="<%= 'active' if controller_name == 'hospedagens' or controller_name == 'reservas' %>">
+                <a href="<%= hospedagens_path %>">
+                  <span class="menu-left"></span>
+                  <span class="menu-mid">Hospedagem</span>
+                  <span class="menu-right"></span>
+                </a>
+                <div class="sub">
+                  <ul>
                     <li><%= link_to 'Reservas', reservas_path %></li>
-				   				</ul>
-				   				<div class="btm-bg"></div>
-				   			</div>
-				   		</li>
+                  </ul>
+                  <div class="btm-bg"></div>
+                </div>
+              </li>
+              <li class="last">
+                <a href="">
+                  <span class="menu-left"></span>
+                  <span class="menu-mid">Sobre</span>
+                  <span class="menu-right"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-right"></div>
+          <div class="content">
+            <%= yield %>
+          </div>
+        </div>
 
-
-				   		<li class="">
-                                                  <a href="#">
-								<span class="menu-left"></span>
-								<span class="menu-mid">American Bar</span>
-								<span class="menu-right"></span>
-							</a>
-	  					</li>
-
-				   		<li class="">
-							<a href="#">
-								<span class="menu-left"></span>
-								<span class="menu-mid">Relatórios</span>
-								<span class="menu-right"></span>
-							</a>
-		          <div class="sub">
-				   				<ul>
-				   					<li> <a>Hospedes</a>	</li>
-									  <li> <a>Reservas</a>	</li>
-									  <li> <a>Disponibilidade</a>	</li>
-									  <li> <a>itens/Produtos</a>	</li>
-
-				   				</ul>
-				   				<div class="btm-bg"></div>
-				   			</div>
-						</li>
-
-				   		<li class="last">
-							<a href="">
-								<span class="menu-left"></span>
-								<span class="menu-mid">Fale Com </span>
-								<span class="menu-right"></span>
-							</a>
-
-						</li>
-
-				   	</ul>
-				</div>
-				<div class="nav-right"></div>
-
-				<div class="content">
-
-					<%= yield%>	<br>
-					<%#=link_to "&laquo; home", root_path, :class=>"homelink"%>
-
-				</div>
-			</div>
-
-
-			<div class="content-bottom"></div>
-
-			<div class="rodape">
-				<p>
-			 	Suporte: lin4tec News, Rua Goias, s/n, Piçarra, Teresina-Pi<br />
-				Losangelo Pacífico (Olegnasol), Dmitry (Dmy), Alvaro (Alvin) e Ceza (TC)
-
-				</p>
-			</div>
-
-		</div>
-	 </div>
-
-	 <br>
-
-</body>
+        <div class="content-bottom"></div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'jquery', 'jquery-ui', 'application' %>
+  </body>
 </html>
-
