@@ -1,0 +1,115 @@
+body{
+	font-family:arial
+}
+
+.clear {
+	clear:both
+}
+
+#gallery {
+	position:relative;
+	height:360px
+}
+	#gallery a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery a img {
+		border:none;
+	}
+	
+	#gallery a.show {
+		z-index:500
+	}
+
+	#gallery .caption {
+		z-index:700; 
+		background-color:#000; 
+		color:#ffffff; 
+		height:50px; 
+		width:50%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery .caption .content {
+		margin:5px
+	}
+	
+	#gallery .caption .content h3 {
+		margin:0;
+		padding:0;
+		color:#1DCCEF;
+	}
+
+body{background:#DCDCDC;}
+/*começo do corpo da pagina*/
+#container{
+	width: 780px;
+	height:480px;
+	margin:0px auto;
+	margin-top:20px;
+}
+#login{
+	width:80px;
+	height:20px;
+	margin-left:650px;
+	-moz-border-radius:10px 10px 0 0;
+	background:#fff;
+	background-image:url(../images/login.png);
+	background-repeat: no-repeat;
+	margin-top:2px;
+}
+#centro{
+	width: 750px;
+	height:450px;
+	margin:0px auto;
+	-moz-border-radius:15px 15px 15px 15px;
+	background:#fff;
+}
+
+#banner{
+	width:750px;
+	height:50px;
+	border-bottom:1px solid black;
+	
+}
+#slide{
+	width: 580px;
+	height:360px;
+	margin-left:90px;
+	float:left;
+	border:1px solid black;
+}
+#rodape{
+	width:750px;
+	height:20px;
+	margin-top:5px;
+}
+
+/*-----fim do corpo da pagina-------*/
+/* --------- formataçao -------- */
+.banner {
+	text-align:center;
+	font-family:Algerian;
+	color:blue;
+	font-size:40px;
+}
+.rodape{
+	text-align:center;
+	font-family:Splash;
+	font-size:20px;
+}
+.login{
+	font-size:15px;
+	margin-top:0px;
+	color:blue;
+	text-align:center;
+}
+
+a{
+	text-decoration:none;
+}
+
+/* --------- fim da formataçao -------- */
