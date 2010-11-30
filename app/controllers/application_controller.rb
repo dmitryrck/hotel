@@ -11,15 +11,13 @@ class ApplicationController < ActionController::Base
     if usuario_autenticado
       true
     else
-      false
+      redirect_to new_sessao_path
     end
   end
 
   def usuario_autenticado
     if session[:usuario].present?
-      Usuario.find(session[:usuario])
-    else
-      redirect_to new_sessao_path
+      @usuario_autenticado = Usuario.find(session[:usuario])
     end
   end
 

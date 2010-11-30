@@ -15,56 +15,57 @@
     <div class="wrapper1">
       <div class="wrapper">
         <div class="nav-wrapper">
+        <% if @usuario_autenticado %>
           <div class="nav-left"></div>
           <div class="nav">
             <ul id="navigation">
-              <li class="<%= 'active' if controller_name == 'home'%>">
-                <a href= '<%= root_path %>' >
-                  <span class="menu-left"></span>
-                  <span class="menu-mid"> Home </span>
-                  <span class="menu-right"></span>
-                </a>
-              </li>
-
               <li class="<%= 'active' if controller_name == 'quartos' or controller_name == 'clientes' or controller_name == 'produtos' %>">
                 <a href="#">
-                  <span class="menu-left"></span>
-                  <span class="menu-mid">Cadastros</span>
-                  <span class="menu-right"></span>
-                </a>
-                <div class="sub">
-                  <ul>
-                    <li><%= link_to 'Quartos', quartos_path %></li>
-                    <li><%= link_to 'Clientes', clientes_path %></li>
-                    <li><%= link_to 'Produtos', produtos_path %></li>
-                  </ul>
-                  <div class="btm-bg"></div>
-                </div>
-              </li>
+                    <span class="menu-left"></span>
+                    <span class="menu-mid">Cadastros</span>
+                    <span class="menu-right"></span>
+                  </a>
+                  <div class="sub">
+                    <ul>
+                      <li><%= link_to 'Quartos', quartos_path %></li>
+                      <li><%= link_to 'Clientes', clientes_path %></li>
+                      <li><%= link_to 'Produtos', produtos_path %></li>
+                    </ul>
+                    <div class="btm-bg"></div>
+                  </div>
+                </li>
 
-              <li class="<%= 'active' if controller_name == 'hospedagens' or controller_name == 'reservas' %>">
-                <a href="<%= hospedagens_path %>">
-                  <span class="menu-left"></span>
-                  <span class="menu-mid">Hospedagem</span>
-                  <span class="menu-right"></span>
-                </a>
-                <div class="sub">
-                  <ul>
-                    <li><%= link_to 'Reservas', reservas_path %></li>
-                  </ul>
-                  <div class="btm-bg"></div>
-                </div>
-              </li>
-              <li class="last">
-                <a href="">
-                  <span class="menu-left"></span>
-                  <span class="menu-mid">Sobre</span>
-                  <span class="menu-right"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <li class="<%= 'active' if controller_name == 'hospedagens' or controller_name == 'reservas' %>">
+                  <a href="<%= hospedagens_path %>">
+                    <span class="menu-left"></span>
+                    <span class="menu-mid">Hospedagem</span>
+                    <span class="menu-right"></span>
+                  </a>
+                  <div class="sub">
+                    <ul>
+                      <li><%= link_to 'Reservas', reservas_path %></li>
+                    </ul>
+                    <div class="btm-bg"></div>
+                  </div>
+                </li>
+                <li class="">
+                  <a href="">
+                    <span class="menu-left"></span>
+                    <span class="menu-mid">Sobre</span>
+                    <span class="menu-right"></span>
+                  </a>
+                </li>
+                <li class="last">
+                  <a href="/sessoes/destroy">
+                    <span class="menu-left"></span>
+                    <span class="menu-mid">Sair</span>
+                    <span class="menu-right"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           <div class="nav-right"></div>
+          <% end %>
           <div class="content">
             <%= yield %>
           </div>
