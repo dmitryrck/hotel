@@ -1,3 +1,4 @@
+<%= link_to 'Voltar para as hospedagens', hospedagens_path %>
 <% if @reservas %>
   <h1><%= l params[:consulta][:data_reserva].to_date %></h1>
   <p>Quantidade de quartos disponíveis <b><%= @reservas %></b>.</p>
