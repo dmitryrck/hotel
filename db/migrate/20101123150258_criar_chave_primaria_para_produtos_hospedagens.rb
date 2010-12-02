@@ -1,4 +1,4 @@
-class CriarChavePrimariaParaProsutosHospedagens < ActiveRecord::Migration
+class CriarChavePrimariaParaProdutosHospedagens < ActiveRecord::Migration
   def self.up
     add_column :produtos_hospedagens, :id, :serial
   end
