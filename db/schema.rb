@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20101128235057) do
     t.datetime "updated_at"
   end
 
-  create_table "produtos_hospedagens", :id => false, :force => true do |t|
+  create_table "produtos_hospedagens", :force => true do |t|
     t.integer  "produto_id"
     t.integer  "hospedagem_id"
     t.float    "valor"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20101128235057) do
     t.float    "valor_total"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "id",            :null => false
   end
 
   create_table "quartos", :force => true do |t|

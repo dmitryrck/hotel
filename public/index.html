@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Hotel</title>
+			<link rel="stylesheet" type="text/css" href="/stylesheets/slide.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="login">
+				<div class="login">
+					<a href="/sessoes/new">Login</a>
+				</div>
+			</div>
+		<div id="centro">
+			<div id="banner">
+				<div class="banner">Sistema de Hotelaria</div>
+			</div>
+		<div id="slide">
+		<div id="gallery">
+
+				<a href="#" class="show">
+					<img src="/images/Paláciode Karnak.jpg" alt="" width="580" height="360" rel="<h3>Palácio de Karnak</h3>O Palácio Karnak é a sede oficial do Governo do Piauí. O palácio tem fachada branca inspirada na arquitetura de um templo de mesmo nome, que existiu no Antigo Egito.">
+				</a>
+				
+				<a href="#">
+					<img src="/images/poloceramico.jpg" alt="" width="580" height="360"  rel="<h3>Pólo Cerâmico do Poti Velho </h3>Região onde artesãos confeccionam e vendem a cerâmica por eles produzida com a argila do rio Poti, são trabalhos que evolvem vasos, peças de decoração e até mesmo bijuterias.">
+				</a>
+				
+				<a href="#">
+					<img src="/images/3.jpg" alt="" width="580" height="360"  rel="<h3>Rio Poty</h3>O Rio Poti é um rio brasileiro que banha os estados do Ceará e Piauí. Nasce na Serra da Joaninha, no município de Parambu, Ceará, e segue no sentido norte-sul até a cidade de Crateús, onde passa a correr no sentido leste-oeste, até desaguar na cidade de Teresina.">
+				</a>
+
+				<a href="#">
+					<img src="/images/metro.jpg" alt="" width="580" height="360" rel="<h3>Metro de Teresina</h3>O Metrô de Teresina foi criado no dia 15 de agosto de 1989,mas com a inauguração da estação Bandeira no centro da cidade, em 2010, a demanda diária de passageiros deve chegar aos 10 mil usuários. ">
+				</a>
+				
+				<a href="#">
+					<img src="/images/PaláciodaCidade.jpg" alt="" width="580" height="360"  rel="<h3>Palacio</h3>O Palácio da Cidade de Teresina é a sede da Prefeitura.">
+				</a>
+				
+				<a href="#">
+					<img src="/images/Teresina.jpg" alt="" width="580" height="360"  rel="<h3>Teresina</h3>Teresina nasceu urbanisticamente moderna. Foi uma das primeiras cidades do Brasil em que o projeto chegou antes da ocupação do espaço urbano.">
+				</a>
+					
+				<a href="#">
+					<img src="/images/Shopping.jpg" alt="" width="580" height="360"  rel="<h3>Teresina Shopping</h3>A Praça de Alimentação do Teresina Shopping tem grande diversidade gastronômica, com ambiente climatizado e muito conforto para toda a família!">
+				</a>
+				
+				<a href="#">
+					<img src="/images/troca.jpg" alt="" width="580" height="360" rel="<h3>Troca Troca</h3>Situado às margens do Rio Parnaíba (divisa do Piauí com o Maranhão), é uma feira onde se comercializa de tudo um pouco: bicicletas, eletroeletrônicos, utensílios domésticos, botijão de gás e quinquilharias em geral">
+				</a>
+				
+				<a href="#">
+					<img src="/images/miranteponte.jpg" alt="" width="580" height="360" rel="<h3>Mirante</h3>Ponto turístico terá capacidade de receber até 80 visitantes por vez.">
+				</a>
+
+				<div class="caption"><div class="content"></div></div>
+			</div>
+			</div>
+			
+			<div class="clear"></div>
+				
+				<div id="rodape">
+					<div class="rodape">@Lin4tec</div>
+				</div>
+		</div>
+	 </div>
+	 <script type="text/javascript" src="/javascripts/jquery.js"></script>
+	 		
+		<script type="text/javascript">	
+			$(document).ready(function() {		
+	
+			//Execute o slideshow
+			slideShow();
+
+			});
+
+			function slideShow() {
+
+				//Defina a opacidade de todas as imagens a 0
+				$('#gallery a').css({opacity: 0.0});
+				
+				//Obter a primeira imagem e exibi-la (defini-lo para opacidade total)
+				$('#gallery a:first').css({opacity: 1.0});
+				
+				//Definir o plano de fundo legenda para semi-transparente
+				$('#gallery .caption').css({opacity: 0.7});
+
+				//Redimensionar a largura da legenda de acordo com a largura da imagem
+				$('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+				
+				//Obter a legenda da primeira imagem de atributo rel e exibi-lo
+				$('#gallery .content').html($('#gallery a:first').find('img').attr('rel'))
+				.animate({opacity: 0.7}, 400);
+				
+				//Chame a função de galeria para executar o slideshow, 6000 = mudança para a próxima imagem depois de 6 segundos
+				setInterval('gallery()',6000);
+				
+			}
+
+			function gallery() {
+				
+				//se não tem a classe BMI show, pegar a primeira imagem
+				var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+
+				//Obter próxima imagem, se atingiu o final da apresentação, girá-lo de volta para a primeira imagem
+
+				var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));	
+				
+				//Obter legenda da imagem ao lado
+				var caption = next.find('img').attr('rel');	
+				
+				//Defina o efeito de fade in para a próxima imagem, classe show tem maior índice z
+				next.css({opacity: 0.0})
+				.addClass('show')
+				.animate({opacity: 1.0}, 1000);
+
+				//Ocultar a imagem atual
+				current.animate({opacity: 0.0}, 1000)
+				.removeClass('show');
+				
+				//Defina a opacidade a 0 e altura de 1px
+				$('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+				
+				//Animar a legenda, a opacidade de 0,7 e altura de 100px, um slide up efeito
+				$('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+				
+				//Mostrar o conteúdo
+				$('#gallery .content').html(caption);
+				
+	
+			}
+
+		</script>
+
+	</body>
+</html>

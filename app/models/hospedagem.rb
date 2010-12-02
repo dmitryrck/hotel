@@ -14,7 +14,7 @@ class Hospedagem < ActiveRecord::Base
   end
 
   def adicionar_consumo(consumo)
-    ProdutosHospedagem.create(:produto_id => consumo[:produto_id], :hospedagem_id => self.id, :valor => consumo[:valor], :quantidade => consumo[:quantidade])
+    ProdutosHospedagem.create(:produto_id => consumo[:produto_id], :hospedagem_id => self.id, :valor => consumo[:valor], :quantidade => consumo[:quantidade], :valor_total => consumo[:valor].to_i * consumo[:quantitdade].to_i)
   end
 
   def total_dias

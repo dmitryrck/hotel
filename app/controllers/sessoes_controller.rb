@@ -7,7 +7,7 @@ class SessoesController < ApplicationController
   def create
     if usuario_id = Usuario.autenticar(params[:sessao])
       session[:usuario] = usuario_id
-      redirect_to '/'
+      redirect_to hospedagens_path
     else
       flash[:error] = 'Usuário e/ou Senha inválidos.'
       render :new
@@ -17,6 +17,6 @@ class SessoesController < ApplicationController
 
   def destroy
     session[:usuario] = nil
-    redirect_to '/'
+    redirect_to hospedagens_path
   end
 end
