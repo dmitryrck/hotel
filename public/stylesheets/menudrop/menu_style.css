@@ -91,6 +91,7 @@
 }
 .nav li.last {
 	background:none;
+	padding-right: 281px;
 }
 .nav li:hover {
 	z-index:2;

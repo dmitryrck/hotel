@@ -38,8 +38,8 @@
 	height: 121px;
 	w_left: 3px;
 
-	background-image:url("/images/lin4tec.pgn");
-	background-repeat:repeat-x;
+	/*background-image:url("/images/lin4tec.png");
+	background-repeat:repeat-x;*/
 	-moz-border-right-colors:blue "transparent";
 
 	font-size: 100%;

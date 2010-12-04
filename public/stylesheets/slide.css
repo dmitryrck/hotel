@@ -72,15 +72,14 @@ body{background:#DCDCDC;}
 #banner{
 	width:750px;
 	height:50px;
-	border-bottom:1px solid black;
-	
+		
 }
 #slide{
 	width: 580px;
 	height:360px;
 	margin-left:90px;
 	float:left;
-	border:1px solid black;
+	border:1px solid #DCDCDC;
 }
 #rodape{
 	width:750px;
