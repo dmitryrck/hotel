@@ -1,7 +1,7 @@
 <% if @hospedagem.reserva.present? %>
   <p>
     Reservado para: <%= @hospedagem.reserva.cliente %>,<br />
-    para a data: <%= @hospedagem.reserva.data %>
+    para a data: <%= l @hospedagem.reserva.data %>
   </p>
   <%= f.hidden_field :reserva_id %>
 <% end %>
