@@ -4,31 +4,31 @@
   <div id="content">
     <p>Quartos sem hospedagens hoje: <%= Hospedagem.quartos_em(Date.today) %>.</p>
 
+    <p>Clique em <b>Mais opções</b> para interagir com a hospedagem.</p>
+
     <%= link_to 'Nova Hospedagem', new_hospedagem_path, :class => :linkto %>
 
     <table>
       <tr>
         <th>Cliente</th>
-        <th>Data reserva</th>
-        <th>Data fim</th>
+        <th>Data de Entrada</th>
+        <th>Data de Saída</th>
         <th>Quarto</th>
-        <th>Estado</th>
-        <th>Ações</th>
+        <th></th>
       </tr>
 
       <% @hospedagens.each do |hospedagem| %>
-        <tr>
+        <tr class="<%= 'finalizado' if hospedagem.finalizado? %>">
           <td><%=h hospedagem.cliente_nome %></td>
           <td><%=h l hospedagem.data_reserva %></td>
           <td><%=h l hospedagem.data_fim %></td>
           <td><%=h hospedagem.quarto_nome %></td>
-          <td><%= hospedagem.estado %></td>
-          <td><%= link_to 'Ver', hospedagem %></td>
+          <td><%= link_to 'Mais opções', hospedagem %></td>
         </tr>
       <% end %>
     </table>
 
     <%= link_to 'Nova Hospedagem', new_hospedagem_path, :class => :linkto %>
-
+    <p>* Itens em cinza já foram finalizados.</p>
   </div>
 </div>

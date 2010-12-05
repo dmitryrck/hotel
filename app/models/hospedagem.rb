@@ -9,12 +9,26 @@ class Hospedagem < ActiveRecord::Base
   validates_presence_of :cliente, :data_reserva, :data_fim, :quarto
   validates_numericality_of :diaria
 
+  before_validation_on_create :setar_diaria
+
   def cliente_nome
     self.cliente.nome if self.cliente
   end
 
   def adicionar_consumo(consumo)
-    ProdutosHospedagem.create(:produto_id => consumo[:produto_id], :hospedagem_id => self.id, :valor => consumo[:valor], :quantidade => consumo[:quantidade], :valor_total => consumo[:valor].to_i * consumo[:quantitdade].to_i)
+    valor_total = consumo[:valor].to_i * consumo[:quantitdade].to_i
+    if consumo[:valor].present?
+      valor_produto = consumo[:valor].to_i
+    else
+      valor_produto = Produto.find(consumo[:produto_id]).preco
+    end
+    ProdutosHospedagem.create(
+      :produto_id => consumo[:produto_id],
+      :hospedagem_id => self.id,
+      :valor => valor_produto,
+      :quantidade => consumo[:quantidade],
+      :valor_total => valor_total
+    )
   end
 
   def total_dias
@@ -79,5 +93,10 @@ class Hospedagem < ActiveRecord::Base
 
   def self.quartos_em(data)
     Quarto.count - self.count(:conditions => ['data_reserva <= ? and data_fim >= ?', data, data])
+  end
+
+  private
+  def setar_diaria
+    self.diaria = self.quarto.diaria if diaria.blank? and quarto_id.present?
   end
 end

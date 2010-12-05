@@ -7,15 +7,15 @@
 <% end %>
 
 <p>
-  <%= f.label :cliente_id %><br />
+  <%= f.label :cliente %><br />
   <%= f.collection_select :cliente_id, Cliente.all, :id, :nome, :include_blank => true %>
 </p>
 <p>
-  <%= f.label :data_reserva %><br />
+  <%= f.label :data_reserva, 'Data da Entrada' %><br />
   <%= f.text_field :data_reserva_formatada, :class => :data %>
 </p>
 <p>
-  <%= f.label :data_fim %><br />
+  <%= f.label :data_fim, 'Data da Saída' %><br />
   <%= f.text_field :data_fim_formatada, :class => :data %>
 </p>
 <p>
