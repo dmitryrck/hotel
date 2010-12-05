@@ -11,6 +11,15 @@ class Hospedagem < ActiveRecord::Base
 
   before_validation_on_create :setar_diaria
 
+  def validate
+    if data_reserva.present? and data_fim.present?
+      if data_reserva > data_fim
+        errors.add(:data_reserva, 'Tem que ser menor que a Data de Saída')
+        errors.add(:data_fim, 'Tem que ser maior que a Data de Entrada')
+      end
+    end
+  end
+
   def cliente_nome
     self.cliente.nome if self.cliente
   end
@@ -93,6 +102,12 @@ class Hospedagem < ActiveRecord::Base
 
   def self.quartos_em(data)
     Quarto.count - self.count(:conditions => ['data_reserva <= ? and data_fim >= ?', data, data])
+  end
+
+  def after_initialize
+    if reserva_id.present?
+      self.data_reserva = reserva.data
+    end
   end
 
   private

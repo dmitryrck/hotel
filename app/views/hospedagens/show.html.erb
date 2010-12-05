@@ -4,7 +4,7 @@
   <%= link_to 'Finalizar', { :controller => :hospedagens, :action => :finalizar, :id => @hospedagem.id } %> |
   <%= link_to 'Adicionar Consumo', { :controller => :hospedagens, :action => :consumo, :id => @hospedagem.id } %> |
   <%= link_to 'Apagar', @hospedagem, :confirm => 'Sure?', :method => :delete %> |
-  <%= link_to 'Todos', hospedagens_path %>
+  <%= link_to 'Voltar para Todas as hospedagens', hospedagens_path %> |
 </p>
 
 <p><b>Estado:</b> <%= @hospedagem.estado %></p>
@@ -55,5 +55,5 @@
   <%= link_to 'Finalizar', { :controller => :hospedagens, :action => :finalizar, :id => @hospedagem.id } %> |
   <%= link_to 'Adicionar Consumo', { :controller => :hospedagens, :action => :consumo, :id => @hospedagem.id } %> |
   <%= link_to 'Apagar', @hospedagem, :confirm => 'Sure?', :method => :delete %> |
-  <%= link_to 'Todos', hospedagens_path %>
+  <%= link_to 'Voltar para Todas as hospedagens', hospedagens_path %> |
 </p>
