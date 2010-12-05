@@ -74,7 +74,7 @@ class Hospedagem < ActiveRecord::Base
   end
 
   def estado
-    finalizado? ? "finalizado" : "ativo"
+    self.finalizado? ? "finalizado" : "ativo"
   end
 
   def self.quartos_em(data)
